@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alejandro Belda Fernández — Data Scientist &amp; Data Analyst</title>
+<meta name="description" content="Portfolio de Alejandro Belda Fernández: proyectos de ciencia de datos, MLOps y analítica con resultados medidos y documentados.">
+<meta property="og:title" content="Alejandro Belda Fernández — Data Scientist & Data Analyst">
+<meta property="og:description" content="Proyectos de ciencia de datos, MLOps y analítica con resultados medidos y documentados.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F5F6F1;
+    --paper-alt:#ECEEE7;
+    --ink:#14181C;
+    --ink-soft:#4C5560;
+    --ink-faint:#8B9289;
+    --line:#D7DACF;
+    --blue:#1D3FBF;
+    --blue-bright:#3457DD;
+    --amber:#B06B26;
+    --amber-bg:#F1E4D4;
+    --chip-bg:#14181C;
+    --chip-fg:#F5F6F1;
+    --radius:4px;
+    --max:1120px;
+    --font-display:'Space Grotesk', sans-serif;
+    --font-body:'Inter', sans-serif;
+    --font-mono:'JetBrains Mono', monospace;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  h1,h2,h3{font-family:var(--font-display);font-weight:700;margin:0;letter-spacing:-0.01em;}
+  p{margin:0 0 1em 0;}
+  .container{max-width:var(--max);margin:0 auto;padding:0 28px;}
+  a:focus-visible, button:focus-visible, summary:focus-visible{outline:2px solid var(--blue);outline-offset:3px;}
+
+  header.site-nav{position:sticky;top:0;z-index:50;background:rgba(245,246,241,0.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 28px;max-width:var(--max);margin:0 auto;}
+  .logo{font-family:var(--font-mono);font-weight:600;font-size:15px;letter-spacing:0.06em;text-decoration:none;color:var(--ink);}
+  .logo span{color:var(--blue);}
+  nav.links{display:flex;gap:26px;align-items:center;}
+  nav.links a{font-family:var(--font-mono);font-size:13px;text-decoration:none;color:var(--ink-soft);letter-spacing:0.02em;padding:4px 2px;border-bottom:1px solid transparent;transition:color .15s ease, border-color .15s ease;}
+  nav.links a:hover{color:var(--ink);border-color:var(--blue);}
+  nav.links a.cta{color:var(--ink);border:1px solid var(--ink);padding:6px 12px;border-radius:var(--radius);}
+  nav.links a.cta:hover{background:var(--ink);color:var(--paper);}
+  nav.links a.lang{color:var(--blue);border:1px solid var(--blue);padding:5px 10px;border-radius:var(--radius);}
+  nav.links a.lang:hover{background:var(--blue);color:var(--paper);}
+  .nav-toggle{display:none;background:none;border:1px solid var(--ink);border-radius:var(--radius);padding:6px 10px;font-family:var(--font-mono);font-size:13px;color:var(--ink);cursor:pointer;}
+
+  .hero{padding:76px 0 0 0;}
+  .eyebrow{font-family:var(--font-mono);font-size:12.5px;letter-spacing:0.12em;color:var(--blue);text-transform:uppercase;margin-bottom:18px;display:block;}
+  .hero h1{font-size:clamp(38px,6vw,64px);line-height:1.05;max-width:14ch;}
+  .hero .role{font-family:var(--font-mono);font-size:15px;color:var(--ink-soft);margin-top:16px;letter-spacing:0.01em;}
+  .hero .lead{max-width:56ch;font-size:18px;color:var(--ink-soft);margin-top:22px;}
+  .hero .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;}
+  .btn{font-family:var(--font-mono);font-size:13.5px;letter-spacing:0.02em;padding:11px 20px;border-radius:var(--radius);text-decoration:none;display:inline-block;border:1px solid var(--ink);transition:all .15s ease;}
+  .btn-primary{background:var(--ink);color:var(--paper);}
+  .btn-primary:hover{background:var(--blue);border-color:var(--blue);}
+  .btn-outline{background:transparent;color:var(--ink);}
+  .btn-outline:hover{border-color:var(--blue);color:var(--blue);}
+
+
+  section{padding:88px 0;}
+  section.tight{padding-top:0;}
+  .section-head{margin-bottom:44px;}
+  .section-head h2{font-size:clamp(26px,3.4vw,34px);max-width:24ch;}
+  .divider{border:none;border-top:1px solid var(--line);margin:0;}
+
+  .about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:56px;align-items:start;}
+  .about-grid p{font-size:16.5px;color:var(--ink-soft);}
+  .facts{border:1px solid var(--line);border-radius:var(--radius);background:var(--paper-alt);}
+  .facts dl{margin:0;padding:22px 24px;}
+  .facts .row{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--line);}
+  .facts .row:last-child{border-bottom:none;}
+  .facts dt{font-family:var(--font-mono);font-size:12.5px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.06em;}
+  .facts dd{margin:0;font-size:14px;text-align:right;font-weight:500;}
+
+  .skill-group{margin-bottom:30px;}
+  .skill-group h3{font-family:var(--font-mono);font-size:13px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;margin-bottom:14px;}
+  .pill-row{display:flex;flex-wrap:wrap;gap:9px;}
+  .pill{font-family:var(--font-mono);font-size:12.5px;background:var(--chip-bg);color:var(--chip-fg);padding:7px 12px;border-radius:3px;letter-spacing:0.01em;}
+
+  .card-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px,1fr));gap:20px;}
+  .card{border:1px solid var(--line);border-radius:var(--radius);background:var(--paper-alt);padding:24px;display:flex;flex-direction:column;gap:14px;}
+  .card .tag{font-family:var(--font-mono);font-size:11.5px;color:var(--blue);text-transform:uppercase;letter-spacing:0.08em;}
+  .card h3{font-size:19px;line-height:1.3;}
+  .card p{font-size:14.5px;color:var(--ink-soft);margin:0;flex-grow:1;}
+  .card .links{display:flex;gap:14px;margin-top:4px;}
+  .card .links a{font-family:var(--font-mono);font-size:12.5px;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);}
+  .card .links a:hover{color:var(--blue);border-color:var(--blue);}
+
+  .oss-card{border:1px solid var(--line);border-radius:var(--radius);padding:30px;display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start;}
+  .oss-card .icon{font-family:var(--font-mono);font-size:12px;color:var(--paper);background:var(--ink);padding:6px 10px;border-radius:3px;height:fit-content;}
+  .oss-card h3{font-size:20px;margin-bottom:10px;}
+  .oss-card p{color:var(--ink-soft);font-size:15px;}
+
+  .log-entry{border-bottom:1px solid var(--line);}
+  .log-entry summary{cursor:pointer;list-style:none;padding:22px 0;display:flex;align-items:center;justify-content:space-between;gap:18px;}
+  .log-entry summary::-webkit-details-marker{display:none;}
+  .log-summary-left{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;}
+  .log-id{font-family:var(--font-mono);font-size:12.5px;color:var(--ink-faint);min-width:64px;}
+  .log-title{font-family:var(--font-display);font-weight:600;font-size:18px;}
+  .log-metric{font-family:var(--font-mono);font-size:13px;color:var(--blue);white-space:nowrap;}
+  .log-caret{font-family:var(--font-mono);font-size:13px;color:var(--ink-faint);transition:transform .18s ease;flex-shrink:0;}
+  .log-entry[open] .log-caret{transform:rotate(45deg);}
+  .log-body{padding:0 0 30px 0;max-width:78ch;}
+  .meta-row{display:flex;flex-wrap:wrap;gap:8px 26px;margin-bottom:18px;}
+  .meta-row div{font-size:13px;}
+  .meta-row dt{font-family:var(--font-mono);color:var(--ink-faint);text-transform:uppercase;font-size:11px;letter-spacing:0.06em;margin-bottom:3px;}
+  .meta-row dd{margin:0;color:var(--ink-soft);}
+  .log-body p{font-size:15px;color:var(--ink-soft);}
+  .callout{border-left:2px solid var(--amber);background:var(--amber-bg);padding:14px 18px;border-radius:0 var(--radius) var(--radius) 0;margin:18px 0;}
+  .callout p{margin:0;font-size:14.5px;color:#4A3418;}
+  .callout .callout-label{font-family:var(--font-mono);font-size:11px;color:var(--amber);text-transform:uppercase;letter-spacing:0.08em;display:block;margin-bottom:6px;}
+  .log-body .links{display:flex;gap:16px;margin-top:16px;}
+  .log-body .links a{font-family:var(--font-mono);font-size:13px;text-decoration:none;color:var(--ink);border-bottom:1px solid var(--ink);}
+  .log-body .links a:hover{color:var(--blue);border-color:var(--blue);}
+
+  footer{border-top:1px solid var(--line);padding:60px 0 40px 0;}
+  .contact-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;}
+  .contact-links{display:flex;flex-direction:column;gap:10px;}
+  .contact-links a{font-family:var(--font-mono);font-size:15px;text-decoration:none;color:var(--ink);border-bottom:1px solid transparent;width:fit-content;}
+  .contact-links a:hover{color:var(--blue);border-color:var(--blue);}
+  footer .colophon{font-family:var(--font-mono);font-size:12px;color:var(--ink-faint);margin-top:50px;}
+
+  @media (max-width: 780px){
+    .about-grid{grid-template-columns:1fr;}
+    nav.links{position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--paper);flex-direction:column;align-items:flex-start;padding:28px;gap:20px;transform:translateY(-110%);transition:transform .2s ease;border-top:1px solid var(--line);}
+    nav.links.open{transform:translateY(0);}
+    .nav-toggle{display:block;}
+    .oss-card{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="#top" class="logo">A<span>·</span>B<span>·</span>F</a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">MENÚ</button>
+    <nav class="links" id="navLinks">
+      <a href="#about">Sobre mí</a>
+      <a href="#skills">Habilidades</a>
+      <a href="#projects">Proyectos</a>
+      <a href="#opensource">Código abierto</a>
+      <a href="#contact">Contacto</a>
+      <a class="lang" href="index.html">EN</a>
+      <a class="cta" href="https://github.com/AlejandroBeldaFernandez" target="_blank" rel="noopener">GitHub ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">// Portfolio de Ciencia de Datos y Analítica</span>
+      <h1>Alejandro Belda Fernández</h1>
+      <div class="role">Junior Data Scientist &amp; Data Analyst · Python · SQL · Machine Learning</div>
+      <p class="lead">Aquí tienes mis proyectos de ciencia de datos y análisis: el código, los resultados y lo que aprendí en cada uno.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#projects">Ver proyectos</a>
+        <a class="btn btn-outline" href="https://www.linkedin.com/in/alejandro-belda-fern%C3%A1ndez-0677903b0/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-outline" href="mailto:alejandrobeldafernandez@gmail.com">Contactar</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div>
+          <span class="eyebrow">// Sobre mí</span>
+          <h2 style="margin-bottom:20px;">Trayectoria</h2>
+          <p>Graduado en Informática por la Universidad de Murcia con Máster en Inteligencia Artificial. Durante un año trabajé como investigador (PDI) gestionando datasets biológicos complejos, administrando infraestructura de servidores Linux y colaborando en entornos de investigación académica. Esa experiencia me dio una base sólida en calidad del dato, rigor metodológico y trabajo con datos reales. Actualmente estoy en transición hacia roles en la industria como Data Scientist o Data Analyst.</p>
+          <p>Disfruto del pipeline completo: entender el problema de negocio, limpiar y transformar datos desordenados, explorarlos con las preguntas correctas, construir modelos que funcionen en contexto y comunicar los resultados con claridad. Me importa la evaluación honesta, las decisiones documentadas y las conclusiones que los perfiles no técnicos puedan llevar a la práctica.</p>
+        </div>
+        <div class="facts">
+          <dl>
+            <div class="row"><dt>Estado</dt><dd>Parado</dd></div>
+            <div class="row"><dt>Busco</dt><dd>Data Scientist / Data Analyst</dd></div>
+            <div class="row"><dt>Formación</dt><dd>Ingeniería Informática y Máster en Inteligencia Artificial — Universidad de Murcia</dd></div>
+            <div class="row"><dt>Experiencia previa</dt><dd>Más de 1 año como investigador (PDI)</dd></div>
+            <div class="row"><dt>Idiomas</dt><dd>Español (nativo) · Inglés (B2)</dd></div>
+            <div class="row"><dt>Contacto</dt><dd>alejandrobeldafernandez@gmail.com</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section id="skills">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">// Habilidades</span>
+        <h2>Stack de trabajo</h2>
+      </div>
+
+      <div class="skill-group">
+        <h3>Machine Learning</h3>
+        <div class="pill-row">
+          <span class="pill">Python</span><span class="pill">scikit-learn</span><span class="pill">Pandas</span>
+          <span class="pill">Matplotlib</span><span class="pill">Seaborn</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>MLOps &amp; Despliegue</h3>
+        <div class="pill-row">
+          <span class="pill">Docker</span><span class="pill">FastAPI</span><span class="pill">Git</span>
+          <span class="pill">MLflow</span><span class="pill">Linux</span><span class="pill">Prefect</span>
+          <span class="pill">AWS</span><span class="pill">Azure</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>Bases de datos y herramientas</h3>
+        <div class="pill-row">
+          <span class="pill">SQL</span><span class="pill">PyPI</span>
+          <span class="pill">Herramientas BI</span><span class="pill">Hojas de cálculo</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section id="projects" class="tight" style="padding-top:88px;">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">// Proyectos Destacados</span>
+        <h2>Cinco entradas que resumen el rango de trabajo</h2>
+      </div>
+
+      <div class="card-grid">
+        <div class="card">
+          <span class="tag">Pipeline · LLM</span>
+          <h3>Generador Automatizado de Reportes de Noticias</h3>
+          <p>Scraping, orquestación, resumen con LLM local y despliegue autoalojado, verificado contra el servicio real en cada paso.</p>
+          <div class="links">
+            <a href="https://github.com/AlejandroBeldaFernandez/Automated-News-Report" target="_blank" rel="noopener">Repo ↗</a>
+            <a href="https://alex-server.taile13699.ts.net/" target="_blank" rel="noopener">Demo ↗</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <span class="tag">Recommender Systems</span>
+          <h3>Sistema de Recomendación de Películas</h3>
+          <p>Tres enfoques de recomendación comparados y explicados, en vez de combinarse en un ranking de caja negra.</p>
+          <div class="links">
+            <a href="https://github.com/AlejandroBeldaFernandez/Movies_Recommendations" target="_blank" rel="noopener">Repo ↗</a>
+            <a href="https://huggingface.co/spaces/Alessandrou24/movie__Recommender" target="_blank" rel="noopener">Demo ↗</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <span class="tag">MLOps · Producción</span>
+          <h3>MLOps: Predicción de Churn en Telco</h3>
+          <p>Ciclo de vida completo en producción: tracking, orquestación, monitorización de drift, reentrenamiento automático y API desplegada.</p>
+          <div class="links">
+            <a href="https://github.com/AlejandroBeldaFernandez/MLOPS-Telco-Customer-Churn-Prediction.git" target="_blank" rel="noopener">Repo ↗</a>
+            <a href="https://huggingface.co/spaces/Alessandrou24/telco-churn-predictor" target="_blank" rel="noopener">Demo ↗</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <span class="tag">SQL · BI</span>
+          <h3>Análisis de Ventas de una Cafetería</h3>
+          <p>12 preguntas de negocio respondidas íntegramente en SQL, desde la limpieza hasta un dashboard y una presentación.</p>
+          <div class="links">
+            <a href="https://github.com/AlejandroBeldaFernandez/Coffee-Shop-Sales.git" target="_blank" rel="noopener">Repo ↗</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <span class="tag">NLP · RAG</span>
+          <h3>Reseñas de Amazon en Español</h3>
+          <p>Clasificación de sentimiento y un sistema RAG sobre el mismo corpus, con comparación A/B formal entre baseline y transformer.</p>
+          <div class="links">
+            <a href="https://github.com/AlejandroBeldaFernandez/Amazon-Reviews-Spanish.git" target="_blank" rel="noopener">Repo ↗</a>
+            <a href="https://huggingface.co/spaces/Alessandrou24/Amazon-Reviews-Spanish" target="_blank" rel="noopener">Demo ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="opensource">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">// Código Abierto</span>
+        <h2>Publicado de forma independiente</h2>
+      </div>
+      <div class="oss-card">
+        <span class="icon">PyPI</span>
+        <div>
+          <h3>calm-data-generator</h3>
+          <p>Librería de Python para generación de datos tabulares sintéticos, desarrollada durante mi etapa como investigador. Envuelve varios motores de generación bajo una única interfaz, simula concept drift para probar cómo se degradan los modelos, y genera un informe automatizado de calidad de datos para cada dataset producido.</p>
+          <div class="links" style="margin-top:16px;">
+            <a href="https://github.com/AlejandroBeldaFernandez/Calm-Data-Generator" target="_blank" rel="noopener">Ver repositorio ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section class="tight" style="padding-top:88px;">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">// Registro Completo</span>
+        <h2>Los diez proyectos, entrada por entrada</h2>
+      </div>
+
+      <div class="log">
+
+        <details class="log-entry">
+          <summary>
+            <div class="log-summary-left">
+              <span class="log-id">LOG · 01</span>
+              <span class="log-title">Predicción de Heridos en Accidentes de Tráfico (Madrid)</span>
+              <span class="log-metric">ROC AUC 0.873</span>
+            </div>
+            <span class="log-caret">+</span>
+          </summary>
+          <div class="log-body">
+            <div class="meta-row">
+              <div><dt>Tipo</dt><dd>Clasificación</dd></div>
+              <div><dt>Stack</dt><dd>Python · pandas · scikit-learn · CatBoost · Optuna · SHAP</dd></div>
+              <div><dt>Dataset</dt><dd>Ayuntamiento de Madrid (2019–2023)</dd></div>
+            </div>
+            <p>Predice si un accidente de tráfico en Madrid resultará en al menos un herido, usando información disponible en el momento del registro. Cubre agregación por accidente, feature engineering, tuning con Optuna y explicabilidad con SHAP.</p>
+            <p><strong>Resultados (CatBoost):</strong> ROC AUC 0.873 · Balanced Accuracy 0.801 · Macro F1 0.73</p>
+            <div class="callout">
+              <span class="callout-label">En la práctica</span>
+              <p>De cada 10 accidentes predichos con heridos, 8 o 9 son correctos. Los errores restantes son mayoritariamente falsas alarmas, no heridos no detectados: el tipo de error menos grave en un contexto de emergencias.</p>
+            </div>
+            <div class="links"><a href="https://github.com/AlejandroBeldaFernandez/madrid-traffic-accidents" target="_blank" rel="noopener">Ver repositorio ↗</a></div>
+          </div>
+        </details>
+
+        <details class="log-entry">
+          <summary>
+            <div class="log-summary-left">
+              <span class="log-id">LOG · 02</span>
+              <span class="log-title">Predicción del Precio de la Vivienda (Madrid)</span>
+              <span class="log-metric">R² 0.897</span>
+            </div>
+            <span class="log-caret">+</span>
+          </summary>
+          <div class="log-body">
+            <div class="meta-row">
+              <div><dt>Tipo</dt><dd>Regresión</dd></div>
+              <div><dt>Stack</dt><dd>Python · pandas · scikit-learn · XGBoost · Optuna · SHAP</dd></div>
+              <div><dt>Dataset</dt><dd>Kaggle — propiedades residenciales en Madrid</dd></div>
+            </div>
+            <p>Predice el precio de venta a partir de características físicas y ubicación. Incluye TargetEncoder por distrito, tuning con Optuna, intervalos de confianza vía bootstrap y explicabilidad con SHAP.</p>
+            <p><strong>Resultados (XGBoost):</strong> RMSE 69.568 € · R² 0.897 · MAPE 15.27%</p>
+            <div class="callout">
+              <span class="callout-label">En la práctica</span>
+              <p>El precio predicho se sitúa, de media, dentro del 15% del precio real. Superficie construida y distrito son los factores dominantes, y se amplifican entre sí: un piso grande en Chamberí vale desproporcionadamente más que uno igual de grande en Vallecas.</p>
+            </div>
+            <div class="links"><a href="https://github.com/AlejandroBeldaFernandez/madrid-real-estate-prediction.git" target="_blank" rel="noopener">Ver repositorio ↗</a></div>
+          </div>
+        </details>
+
+        <details class="log-entry">
+          <summary>
+            <div class="log-summary-left">
+              <span class="log-id">LOG · 03</span>
+              <span class="log-title">Clustering de Perfiles de Clientes</span>
+              <span class="log-metric">Silhouette 0.24</span>
+            </div>
+            <span class="log-caret">+</span>
+          </summary>
+          <div class="log-body">
+            <div class="meta-row">
+              <div><dt>Tipo</dt><dd>Clustering no supervisado</dd></div>
+              <div><dt>Stack</dt><dd>Python · pandas · scikit-learn · umap-learn</dd></div>
+              <div><dt>Dataset</dt><dd>Kaggle — Customer Personality Analysis</dd></div>
+            </div>
+            <p>Segmenta clientes en 3 perfiles a partir de datos demográficos, de gasto y de respuesta a campañas. Incluye detección de outliers, PCA, K-Means con selección por codo y silueta, y visualización UMAP.</p>
+            <p><strong>Resultados (K-Means K=3 + PCA):</strong> Silhouette Score 0.24 · 3 segmentos identificados</p>
+            <div class="callout">
+              <span class="callout-label">En la práctica</span>
+              <p>Los clientes Premium gastan 1.274 € de media sin necesitar descuentos. Los Cazadores de Ofertas compran 3,4 veces más con promociones: ahí es donde el presupuesto de descuentos rinde más. Aplicar la misma campaña a los tres grupos es la peor asignación posible.</p>
+            </div>
+            <div class="links"><a href="https://github.com/AlejandroBeldaFernandez/Customer-Personality-Analysis.git" target="_blank" rel="noopener">Ver repositorio ↗</a></div>
+          </div>
+        </details>
+
+        <details class="log-entry">
+          <summary>
+            <div class="log-summary-left">
+              <span class="log-id">LOG · 04</span>
+              <span class="log-title">MLOps: Predicción de Fuga de Clientes</span>
+              <span class="log-metric">ROC-AUC 0.84</span>
+            </div>
+            <span class="log-caret">+</span>
+          </summary>
+          <div class="log-body">
+            <div class="meta-row">
+              <div><dt>Tipo</dt><dd>Pipeline MLOps · Clasificación binaria</dd></div>
+              <div><dt>Stack</dt><dd>scikit-learn · Optuna · MLflow · Prefect · FastAPI · Evidently AI · Docker · Terraform</dd></div>
+              <div><dt>Dataset</dt><dd>Kaggle — IBM Telco Customer Churn</dd></div>
+            </div>
+            <p>Ciclo de vida completo en producción: validación de datos, tuning con Optuna (150 trials), tracking con MLflow, orquestación con Prefect, monitorización de drift, reentrenamiento automático y API REST con FastAPI.</p>
+            <p><strong>Resultados (Random Forest + Optuna):</strong> ROC-AUC 0.84 · Balanced Accuracy 0.76 · Recall (churn) 0.76</p>
+            <div class="callout">
+              <span class="callout-label">En la práctica</span>
+              <p>El modelo identifica al 76% de los clientes que van a cancelar antes de que lo hagan. El valor real está en la infraestructura: el pipeline reentrena solo cuando más del 40% de las variables muestran drift, y solo promociona un modelo nuevo si supera al actual.</p>
+            </div>
+            <div class="links">
+              <a href="https://github.com/AlejandroBeldaFernandez/MLOPS-Telco-Customer-Churn-Prediction.git" target="_blank" rel="noopener">Ver repositorio ↗</a>
+              <a href="https://huggingface.co/spaces/Alessandrou24/telco-churn-predictor" target="_blank" rel="noopener">Ver demo ↗</a>
+            </div>
+          </div>
+        </details>
+
+        <details class="log-entry">
+          <summary>
+            <div class="log-summary-left">
+              <span class="log-id">LOG · 05</span>
+              <span class="log-title">Predicción de Series Temporales de Ventas</span>
+              <span class="log-metric">RMSLE 0.381</span>
+            </div>
+            <span class="log-caret">+</span>
+          </summary>
+          <div class="log-body">
+            <div class="meta-row">
+              <div><dt>Tipo</dt><dd>Series temporales · Datos de panel</dd></div>
+              <div><dt>Stack</dt><dd>pandas · statsmodels · linearmodels · LightGBM · XGBoost · Optuna · SHAP</dd></div>
+              <div><dt>Dataset</dt><dd>Kaggle — Corporación Favorita (Ecuador)</dd></div>
+            </div>
+            <p>Previsión de principio a fin sobre un panel de 3 millones de filas (1.782 series tienda × familia durante 4,5 años). Incluye diagnóstico clásico de series temporales, baseline econométrico con PanelOLS y modelos de gradient boosting con validación cruzada temporal.</p>
+            <p><strong>Resultados (XGBoost + Optuna):</strong> RMSLE 0.381 · R² 0.977 · ~28% mejor que el baseline naive</p>
+            <div class="callout">
+              <span class="callout-label">En la práctica</span>
+              <p>Las predicciones se explican sobre todo por la inercia reciente de ventas. La única palanca de alto impacto que la empresa controla son las promociones, así que el modelo funciona además como simulador de escenarios antes de gastar un solo euro.</p>
+            </div>
+            <div class="links"><a href="https://github.com/AlejandroBeldaFernandez/Store-Sales.git" target="_blank" rel="noopener">Ver repositorio ↗</a></div>
+          </div>
+        </details>
+
+        <details class="log-entry">
+          <summary>
+            <div class="log-summary-left">
+              <span class="log-id">LOG · 06</span>
+              <span class="log-title">Análisis de Ventas de Cafeterías</span>
+              <span class="log-metric">SQL · 12 preguntas</span>
+            </div>
+            <span class="log-caret">+</span>
+          </summary>
+          <div class="log-body">
+            <div class="meta-row">
+              <div><dt>Tipo</dt><dd>EDA · Business Intelligence</dd></div>
+              <div><dt>Stack</dt><dd>PostgreSQL · Google Sheets · Metabase · Google Slides</dd></div>
+              <div><dt>Dataset</dt><dd>Maven Analytics — Coffee Shop Sales (NYC)</dd></div>
+            </div>
+            <p>Análisis de ventas de una cadena de cafeterías ficticia con tres locales en Nueva York. Limpieza en SQL, 12 preguntas de negocio respondidas íntegramente en SQL, dashboard en Metabase y presentación de data storytelling.</p>
+            <p><strong>Hallazgos clave:</strong> el revenue casi se duplicó de enero a junio. Coffee y Tea generan el 66% del revenue. Solo 11 tipos de producto generan el 80% (regla de Pareto).</p>
+            <div class="callout">
+              <span class="callout-label">En la práctica</span>
+              <p>Un propietario puede usar este análisis para decidir qué productos potenciar, optimizar turnos según las horas punta y diseñar campañas para los meses más débiles.</p>
+            </div>
+            <div class="links"><a href="https://github.com/AlejandroBeldaFernandez/Coffee-Shop-Sales.git" target="_blank" rel="noopener">Ver repositorio ↗</a></div>
+          </div>
+        </details>
+
+        <details class="log-entry">
+          <summary>
+            <div class="log-summary-left">
+              <span class="log-id">LOG · 07</span>
+              <span class="log-title">Reseñas de Amazon en Español</span>
+              <span class="log-metric">Macro F1 0.765</span>
+            </div>
+            <span class="log-caret">+</span>
+          </summary>
+          <div class="log-body">
+            <div class="meta-row">
+              <div><dt>Tipo</dt><dd>NLP · Deep Learning · Retrieval</dd></div>
+              <div><dt>Stack</dt><dd>PyTorch · Hugging Face Transformers · ChromaDB</dd></div>
+              <div><dt>Dataset</dt><dd>Amazon Reviews Multi — español (208.899 reseñas)</dd></div>
+            </div>
+            <p>Un clasificador de sentimiento (TF-IDF baseline vs. BETO ajustado) y un sistema RAG que responde preguntas sobre el corpus citando reseñas reales. Comparación A/B formal con McNemar, bootstrap y análisis de coste por predicción.</p>
+            <p><strong>Resultados:</strong> BETO 0,765 F1 macro vs. 0,725 del baseline (p = 1,3e-12), pero 1.009 veces más caro por predicción.</p>
+            <div class="callout">
+              <span class="callout-label">En la práctica</span>
+              <p>El clasificador dice cuántos clientes están descontentos y dónde; el RAG dice por qué. Etiquetar el índice completo cuesta 10 segundos con el baseline frente a 2,8 horas con BETO, así que el coste decide la arquitectura.</p>
+            </div>
+            <div class="links">
+              <a href="https://github.com/AlejandroBeldaFernandez/Amazon-Reviews-Spanish.git" target="_blank" rel="noopener">Ver repositorio ↗</a>
+              <a href="https://huggingface.co/spaces/Alessandrou24/Amazon-Reviews-Spanish" target="_blank" rel="noopener">Ver demo ↗</a>
+            </div>
+          </div>
+        </details>
+
+        <details class="log-entry">
+          <summary>
+            <div class="log-summary-left">
+              <span class="log-id">LOG · 08</span>
+              <span class="log-title">Sistema de Recomendación de Películas</span>
+              <span class="log-metric">Precision@5 42.4%</span>
+            </div>
+            <span class="log-caret">+</span>
+          </summary>
+          <div class="log-body">
+            <div class="meta-row">
+              <div><dt>Tipo</dt><dd>Recommender Systems · Matrix Factorization</dd></div>
+              <div><dt>Stack</dt><dd>pandas · scikit-learn · Surprise (SVD) · Gradio</dd></div>
+              <div><dt>Dataset</dt><dd>The Movies Dataset — 7.818 películas, ~100.000 valoraciones</dd></div>
+            </div>
+            <p>Tres sistemas comparados sobre el mismo catálogo: basado en contenido, colaborativo item-based y SVD. Evaluados con Precision@5/Recall@5, documentando arranque en frío y cobertura en lugar de mezclarlos en un único ranking.</p>
+            <p><strong>Resultados:</strong> el colaborativo gana por 7-8x, pero cubre solo el 43% del catálogo con historial suficiente.</p>
+            <div class="callout">
+              <span class="callout-label">En la práctica</span>
+              <p>Los tres modelos son complementarios, no competidores. Un producto real necesita los tres, más un plan explícito para el 57% del catálogo al que el colaborativo y SVD no llegan.</p>
+            </div>
+            <div class="links">
+              <a href="https://github.com/AlejandroBeldaFernandez/Movies_Recommendations" target="_blank" rel="noopener">Ver repositorio ↗</a>
+              <a href="https://huggingface.co/spaces/Alessandrou24/movie__Recommender" target="_blank" rel="noopener">Ver demo ↗</a>
+            </div>
+          </div>
+        </details>
+
+        <details class="log-entry">
+          <summary>
+            <div class="log-summary-left">
+              <span class="log-id">LOG · 09</span>
+              <span class="log-title">Clasificación de Imágenes de Productos de Moda</span>
+              <span class="log-metric">Accuracy 99%</span>
+            </div>
+            <span class="log-caret">+</span>
+          </summary>
+          <div class="log-body">
+            <div class="meta-row">
+              <div><dt>Tipo</dt><dd>Computer Vision · Transfer Learning · Grad-CAM</dd></div>
+              <div><dt>Stack</dt><dd>PyTorch · torchvision · Grad-CAM</dd></div>
+              <div><dt>Dataset</dt><dd>Fashion Product Images — 43.946 productos</dd></div>
+            </div>
+            <p>EfficientNetB0 y ResNet50 comparados sobre la misma tarea de clasificación, interpretados con Grad-CAM en vez de dejarlos como caja negra. 3 de 7 categorías originales se descartaron por falta de datos suficientes.</p>
+            <p><strong>Resultados:</strong> ResNet50 gana en todas las clases y métricas (99% vs. 97% de accuracy).</p>
+            <div class="callout">
+              <span class="callout-label">En la práctica</span>
+              <p>Accessories y Apparel concentran el 63% de los errores: Grad-CAM muestra que el modelo fija la atención en el accesorio en vez de en la prenda etiquetada. Un fallo concreto y entendido, no ruido aleatorio.</p>
+            </div>
+            <div class="links"><a href="https://github.com/AlejandroBeldaFernandez/Fashion-Product-Images" target="_blank" rel="noopener">Ver repositorio ↗</a></div>
+          </div>
+        </details>
+
+        <details class="log-entry">
+          <summary>
+            <div class="log-summary-left">
+              <span class="log-id">LOG · 10</span>
+              <span class="log-title">Generador Automatizado de Reportes de Noticias</span>
+              <span class="log-metric">Self-hosted</span>
+            </div>
+            <span class="log-caret">+</span>
+          </summary>
+          <div class="log-body">
+            <div class="meta-row">
+              <div><dt>Tipo</dt><dd>Web Scraping · Orquestación · LLM local</dd></div>
+              <div><dt>Stack</dt><dd>Playwright · Prefect · SQLite · Qwen2.5 · Docker · Tailscale Funnel</dd></div>
+              <div><dt>Fuente</dt><dd>Sitemap de Google News de RTVE</dd></div>
+            </div>
+            <p>Pipeline de extremo a extremo verificado contra el servicio real en cada paso, no contra su documentación. El destino de despliegue previsto (Hugging Face Spaces) resultó no ser viable, así que el proyecto terminó autoalojado vía Docker + Tailscale Funnel.</p>
+            <p><strong>Resultado:</strong> reporte diario funcional con cita a la fuente original en cada entrada.</p>
+            <div class="callout">
+              <span class="callout-label">En la práctica</span>
+              <p>El dashboard solo está disponible mientras la máquina autoalojada está encendida, no 24/7: la contrapartida honesta de un despliegue realmente gratuito.</p>
+            </div>
+            <div class="links">
+              <a href="https://github.com/AlejandroBeldaFernandez/Automated-News-Report" target="_blank" rel="noopener">Ver repositorio ↗</a>
+              <a href="https://alex-server.taile13699.ts.net/" target="_blank" rel="noopener">Ver demo ↗</a>
+            </div>
+          </div>
+        </details>
+
+        <details class="log-entry">
+          <summary>
+            <div class="log-summary-left">
+              <span class="log-id">EXTRA</span>
+              <span class="log-title">Cloud: Inferencia ML Serverless en AWS y Azure</span>
+              <span class="log-metric">Serverless</span>
+            </div>
+            <span class="log-caret">+</span>
+          </summary>
+          <div class="log-body">
+            <div class="meta-row">
+              <div><dt>Tipo</dt><dd>Despliegue Cloud · Arquitectura Serverless</dd></div>
+              <div><dt>Stack</dt><dd>AWS S3 · Lambda · API Gateway · Azure Blob Storage · Azure Functions</dd></div>
+              <div><dt>Dataset</dt><dd>Iris (AWS) · Diabetes (Azure) — casos de estudio mínimos</dd></div>
+            </div>
+            <p>Dos proyectos pequeños y autocontenidos para demostrar conocimiento práctico de ambas nubes: modelos servidos vía endpoint HTTP público, sin servidor que administrar. El foco es la arquitectura y los problemas reales resueltos por el camino (permisos IAM, límites de paquete, restricciones de región).</p>
+            <div class="links">
+              <a href="https://github.com/AlejandroBeldaFernandez/AWS-Iris-Prediction.git" target="_blank" rel="noopener">Repo AWS ↗</a>
+              <a href="https://github.com/AlejandroBeldaFernandez/Azure-Diabetes-Prediction.git" target="_blank" rel="noopener">Repo Azure ↗</a>
+            </div>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <span class="eyebrow">// Contacto</span>
+        <h2 style="font-size:26px;margin-bottom:20px;">Hablemos</h2>
+        <div class="contact-links">
+          <a href="mailto:alejandrobeldafernandez@gmail.com">alejandrobeldafernandez@gmail.com</a>
+          <a href="https://www.linkedin.com/in/alejandro-belda-fern%C3%A1ndez-0677903b0/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="https://github.com/AlejandroBeldaFernandez" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+    </div>
+    <p class="colophon">© 2026 Alejandro Belda Fernández. Construido con HTML y CSS, sin frameworks.</p>
+  </div>
+</footer>
+
+<script>
+  var toggle = document.getElementById('navToggle');
+  var links = document.getElementById('navLinks');
+  toggle.addEventListener('click', function(){
+    var isOpen = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  links.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      links.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+
+</body>
+</html>
