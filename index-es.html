@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alejandro Belda Fernández — Portafolio de Datos e Inteligencia Artificial</title>
-<meta name="description" content="Portafolio de Alejandro Belda Fernández: proyectos de software, ingeniería de datos, MLOps e Inteligencia Artificial con resultados medidos y documentados.">
-<meta property="og:title" content="Alejandro Belda Fernández — Portafolio de Datos e Inteligencia Artificial">
-<meta property="og:description" content="Proyectos de software, ingeniería de datos, MLOps e Inteligencia Artificial con resultados medidos y documentados.">
+<title>Alejandro Belda Fernández — Portafolio de Desarrollo Full Stack y Software</title>
+<meta name="description" content="Portafolio de Alejandro Belda Fernández: desarrollo de software Full Stack, administración de servidores Linux, Python, Java, SQL e IA.">
+<meta property="og:title" content="Alejandro Belda Fernández — Portafolio de Software y Full Stack">
+<meta property="og:description" content="Proyectos de desarrollo de software, aplicaciones web, infraestructura Linux e ingeniería de IA.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -86,19 +86,11 @@
   .pill-row{display:flex;flex-wrap:wrap;gap:9px;}
   .pill{font-family:var(--font-mono);font-size:12.5px;background:var(--chip-bg);color:var(--chip-fg);padding:7px 12px;border-radius:3px;letter-spacing:0.01em;}
 
-  .card-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px,1fr));gap:20px;}
-  .card{border:1px solid var(--line);border-radius:var(--radius);background:var(--paper-alt);padding:24px;display:flex;flex-direction:column;gap:14px;}
-  .card .tag{font-family:var(--font-mono);font-size:11.5px;color:var(--blue);text-transform:uppercase;letter-spacing:0.08em;}
-  .card h3{font-size:19px;line-height:1.3;}
-  .card p{font-size:14.5px;color:var(--ink-soft);margin:0;flex-grow:1;}
-  .card .links{display:flex;gap:14px;margin-top:4px;}
-  .card .links a{font-family:var(--font-mono);font-size:12.5px;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);}
-  .card .links a:hover{color:var(--blue);border-color:var(--blue);}
-
-  .oss-card{border:1px solid var(--line);border-radius:var(--radius);padding:30px;display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start;}
-  .oss-card .icon{font-family:var(--font-mono);font-size:12px;color:var(--paper);background:var(--ink);padding:6px 10px;border-radius:3px;height:fit-content;}
+  .oss-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  .oss-card{border:1px solid var(--line);border-radius:var(--radius);padding:30px;display:flex;flex-direction:column;justify-content:space-between;background:var(--paper-alt);}
+  .oss-card .icon{font-family:var(--font-mono);font-size:12px;color:var(--paper);background:var(--ink);padding:6px 10px;border-radius:3px;height:fit-content;width:fit-content;margin-bottom:14px;}
   .oss-card h3{font-size:20px;margin-bottom:10px;}
-  .oss-card p{color:var(--ink-soft);font-size:15px;}
+  .oss-card p{color:var(--ink-soft);font-size:15px;margin-bottom:18px;}
 
   .log-entry{border-bottom:1px solid var(--line);}
   .log-entry summary{cursor:pointer;list-style:none;padding:22px 0;display:flex;align-items:center;justify-content:space-between;gap:18px;}
@@ -131,10 +123,10 @@
 
   @media (max-width: 780px){
     .about-grid{grid-template-columns:1fr;}
+    .oss-grid{grid-template-columns:1fr;}
     nav.links{position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--paper);flex-direction:column;align-items:flex-start;padding:28px;gap:20px;transform:translateY(-110%);transition:transform .2s ease;border-top:1px solid var(--line);}
     nav.links.open{transform:translateY(0);}
     .nav-toggle{display:block;}
-    .oss-card{grid-template-columns:1fr;}
   }
 </style>
 </head>
@@ -147,9 +139,8 @@
     <nav class="links" id="navLinks">
       <a href="#about">Sobre mí</a>
       <a href="#skills">Habilidades</a>
+      <a href="#featured">Destacados</a>
       <a href="#projects">Proyectos</a>
-      <a href="#opensource">Código Abierto</a>
-      <a href="CV.pdf" target="_blank" rel="noopener">Ver CV</a>
       <a href="#contact">Contacto</a>
       <a class="lang" href="index.html">EN</a>
       <a class="cta" href="https://github.com/AlejandroBeldaFernandez" target="_blank" rel="noopener">GitHub ↗</a>
@@ -161,10 +152,10 @@
 
   <section class="hero">
     <div class="container">
-      <span class="eyebrow">// Portafolio de Datos e Inteligencia Artificial</span>
+      <span class="eyebrow">// Portafolio de Desarrollo de Software y Full Stack</span>
       <h1>Alejandro Belda Fernández</h1>
-      <div class="role">Ingeniero Informático · Datos e IA · Python · SQL · Machine Learning</div>
-      <p class="lead">Una colección de mis proyectos de software, ingeniería de datos e Inteligencia Artificial: el código, los resultados y lo aprendido en el proceso.</p>
+      <div class="role">Ingeniero Informático · Desarrollador de Software · Python · Java · HTML/CSS · SQL · Linux</div>
+      <p class="lead">Una colección de mis proyectos de desarrollo de software, aplicaciones web e Inteligencia Artificial: arquitectura limpia, código sólido y proyectos prácticos.</p>
       <div class="cta-row">
         <a class="btn btn-primary" href="#projects">Ver proyectos</a>
         <a class="btn btn-outline" href="https://www.linkedin.com/in/alejandro-belda-fern%C3%A1ndez-0677903b0/" target="_blank" rel="noopener">LinkedIn</a>
@@ -179,17 +170,17 @@
         <div>
           <span class="eyebrow">// Sobre mí</span>
           <h2 style="margin-bottom:20px;">Trayectoria</h2>
-          <p>Graduado en Ingeniería Informática por la Universidad de Murcia con un Máster en Inteligencia Artificial. Durante un año trabajé como personal docente e investigador (PDI) en la Facultad de Informática de la Universidad de Murcia (UMU), llevando a cabo el procesamiento de datos complejos, el desarrollo de modelos predictivos, el desarrollo de software libre y la gestión de infraestructura de servidores Linux. Esta experiencia me dio una sólida base en calidad de datos, rigor metodológico y trabajo con conjuntos de datos complejos del mundo real. Actualmente busco activamente oportunidades en el sector tecnológico.</p>
-          <p>Disfruto del ciclo completo de desarrollo y datos: comprender el problema de negocio, limpiar y transformar entradas complejas, construir modelos algorítmicos y backends robustos, y comunicar los resultados con claridad. Me preocupo por la evaluación honesta, las decisiones documentadas y las conclusiones ejecutables para las partes interesadas.</p>
+          <p>Ingeniero Informático por la Universidad de Murcia con Máster en Inteligencia Artificial. Experiencia como Investigador (PDI) en la Facultad de Informática de la UMU en desarrollo de software, desarrollo web, creación de librerías Open Source y gestión de infraestructura de servidores Linux.</p>
+          <p>Combino una sólida base de ingeniería informática con capacidad para resolver problemas complejos mediante tecnologías web y de desarrollo. Experimentado en construir soluciones de software de extremo a extremo, administrar servidores e integrar algoritmos de IA en aplicaciones operativas.</p>
         </div>
         <div class="facts">
           <dl>
             <div class="row"><dt>Disponibilidad</dt><dd>Inmediata</dd></div>
-            <div class="row"><dt>Puesto buscado</dt><dd>Ingeniero de Datos e Inteligencia Artificial</dd></div>
-            <div class="row"><dt>Educación</dt><dd>Ingeniería Informática y Máster en Inteligencia Artificial — Universidad de Murcia</dd></div>
-            <div class="row"><dt>Experiencia previa</dt><dd>1 año como investigador (PDI) en la Facultad de Informática (UMU)</dd></div>
+            <div class="row"><dt>Rol</dt><dd>Desarrollador Full Stack / Software Engineer</dd></div>
+            <div class="row"><dt>Formación</dt><dd>Grado en Ing. Informática y Máster en IA (UMU)</dd></div>
+            <div class="row"><dt>Experiencia</dt><dd>Investigador (PDI) — Facultad de Informática, UMU</dd></div>
+            <div class="row"><dt>Ubicación</dt><dd>Abarán, Región de Murcia, España</dd></div>
             <div class="row"><dt>Idiomas</dt><dd>Español (nativo) · Inglés (B2)</dd></div>
-            <div class="row"><dt>Contacto</dt><dd>alejandrobeldafernandez@gmail.com</dd></div>
           </dl>
         </div>
       </div>
@@ -202,46 +193,66 @@
     <div class="container">
       <div class="section-head">
         <span class="eyebrow">// Habilidades</span>
-        <h2>Stack de trabajo</h2>
+        <h2>Tecnologías principales</h2>
       </div>
 
       <div class="skill-group">
-        <h3>Herramientas e Informes</h3>
+        <h3>Lenguajes y Web</h3>
         <div class="pill-row">
-          <span class="pill">Pandas</span><span class="pill">NumPy</span><span class="pill">Matplotlib</span>
-          <span class="pill">Seaborn</span><span class="pill">Metabase</span><span class="pill">Excel</span>
+          <span class="pill">Python</span><span class="pill">Java</span>
+          <span class="pill">HTML</span><span class="pill">CSS</span>
         </div>
       </div>
 
       <div class="skill-group">
-        <h3>Tecnologías e Inteligencia Artificial</h3>
+        <h3>Bases de Datos</h3>
         <div class="pill-row">
-          <span class="pill">Python</span><span class="pill">Machine Learning</span><span class="pill">Deep Learning</span>
-          <span class="pill">PLN (NLP)</span><span class="pill">Modelado Predictivo</span><span class="pill">MLOps</span>
+          <span class="pill">SQL</span>
         </div>
       </div>
 
       <div class="skill-group">
-        <h3>Bases de Datos y Pipelines</h3>
+        <h3>Sistemas y DevOps</h3>
         <div class="pill-row">
-          <span class="pill">SQL</span><span class="pill">Pipelines ETL</span>
+          <span class="pill">Linux (Administración de servidores)</span><span class="pill">Git</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>Librerías e IA</h3>
+        <div class="pill-row">
+          <span class="pill">Machine Learning</span><span class="pill">Deep Learning</span><span class="pill">NLP</span>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="opensource">
+  <section id="featured">
     <div class="container">
       <div class="section-head">
-        <span class="eyebrow">// Código Abierto</span>
-        <h2>Publicado independientemente</h2>
+        <span class="eyebrow">// Trabajos Destacados</span>
+        <h2>Desarrollo Web y Open Source</h2>
       </div>
-      <div class="oss-card">
-        <span class="icon">PyPI</span>
-        <div>
-          <h3>calm-data-generator</h3>
-          <p>Librería de Python para la manipulación, generación de datos tabulares sintéticos y análisis de calidad, desarrollada durante mi etapa como investigador. Agrupa varios backends de generación bajo una interfaz unificada, simula el cambio de concepto (concept drift) para probar la degradación de los modelos y produce un informe automatizado de calidad de datos para cada dataset generado.</p>
-          <div class="links" style="margin-top:16px;">
+
+      <div class="oss-grid">
+        <div class="oss-card">
+          <div>
+            <span class="icon">Proyecto Web</span>
+            <h3>Sitio Web del Grupo de Investigación AIKE</h3>
+            <p>Diseño, creación y mantenimiento de la página web oficial del grupo AIKE (Artificial Intelligence and Knowledge Engineering) en la Universidad de Murcia.</p>
+          </div>
+          <div class="links">
+            <a href="https://www.um.es/web/aike/" target="_blank" rel="noopener">Visitar sitio web ↗</a>
+          </div>
+        </div>
+
+        <div class="oss-card">
+          <div>
+            <span class="icon">Librería PyPI</span>
+            <h3>calm-data-generator</h3>
+            <p>Librería de Python para la manipulación de datos, generación de datos tabulares sintéticos y análisis de calidad, desarrollada durante mi etapa como investigador en la UMU y publicada en PyPI.</p>
+          </div>
+          <div class="links">
             <a href="https://github.com/AlejandroBeldaFernandez/Calm-Data-Generator" target="_blank" rel="noopener">Ver repositorio ↗</a>
           </div>
         </div>
@@ -251,11 +262,11 @@
 
   <hr class="divider">
 
-  <section id="projects" class="tight" style="padding-top:88px;">
+  <section class="tight" id="projects" style="padding-top:88px;">
     <div class="container">
       <div class="section-head">
-        <span class="eyebrow">// Registro Completo</span>
-        <h2>Los diez proyectos, entrada por entrada</h2>
+        <span class="eyebrow">// Proyectos</span>
+        <h2>Desarrollo de Software y Sistemas</h2>
       </div>
 
       <div class="log">
@@ -263,261 +274,20 @@
         <details class="log-entry">
           <summary>
             <div class="log-summary-left">
-              <span class="log-id">REG · 01</span>
-              <span class="log-title">Predicción de Lesiones en Accidentes de Tráfico de Madrid</span>
-              <span class="log-metric">ROC AUC 0.873</span>
+              <span class="log-id">PROY · 01</span>
+              <span class="log-title">Generador Automatizado de Noticias</span>
+              <span class="log-metric">Pipeline Web Automático</span>
             </div>
             <span class="log-caret">+</span>
           </summary>
           <div class="log-body">
             <div class="meta-row">
-              <div><dt>Tipo</dt><dd>Clasificación</dd></div>
-              <div><dt>Stack</dt><dd>Python · pandas · scikit-learn · CatBoost · Optuna · SHAP</dd></div>
-              <div><dt>Dataset</dt><dd>Datos abiertos del Ayuntamiento de Madrid (2019–2023)</dd></div>
+              <div><dt>Tipo</dt><dd>Web Scraping · Automatización · LLM Local</dd></div>
+              <div><dt>Stack</dt><dd>Playwright · Python · SQLite · Docker · Tailscale</dd></div>
             </div>
-            <p>Predice si un accidente de tráfico en Madrid resultará en al menos una persona herida, utilizando información disponible en el momento del reporte. Cubre agregación de persona a accidente, ingeniería de características, ajuste con Optuna y explicabilidad con SHAP.</p>
-            <p><strong>Resultados (CatBoost):</strong> ROC AUC 0.873 · Precisión Balanceada 0.801 · Macro F1 0.73</p>
-            <div class="callout">
-              <span class="callout-label">En la práctica</span>
-              <p>De cada 10 accidentes predichos con heridos, entre 8 y 9 son correctos. Los errores restantes son principalmente falsas alarmas en lugar de heridos no detectados, el tipo de error más seguro en un contexto de emergencias.</p>
-            </div>
-            <div class="links"><a href="https://github.com/AlejandroBeldaFernandez/madrid-traffic-accidents" target="_blank" rel="noopener">Ver repositorio ↗</a></div>
-          </div>
-        </details>
-
-        <details class="log-entry">
-          <summary>
-            <div class="log-summary-left">
-              <span class="log-id">REG · 02</span>
-              <span class="log-title">Predicción de Precios Inmobiliarios en Madrid</span>
-              <span class="log-metric">R² 0.897</span>
-            </div>
-            <span class="log-caret">+</span>
-          </summary>
-          <div class="log-body">
-            <div class="meta-row">
-              <div><dt>Tipo</dt><dd>Regresión</dd></div>
-              <div><dt>Stack</dt><dd>Python · pandas · scikit-learn · XGBoost · Optuna · SHAP</dd></div>
-              <div><dt>Dataset</dt><dd>Kaggle — Ofertas de inmuebles residenciales en Madrid</dd></div>
-            </div>
-            <p>Predice el precio de venta de propiedades residenciales en Madrid a partir de características físicas y ubicación. Incluye TargetEncoder para la codificación de distritos, ajuste con Optuna, intervalos de confianza bootstrap y explicabilidad con SHAP.</p>
-            <p><strong>Resultados (XGBoost):</strong> RMSE €69,568 · R² 0.897 · MAPE 15.27%</p>
-            <div class="callout">
-              <span class="callout-label">En la práctica</span>
-              <p>En promedio, el precio predicho está dentro del 15% del precio real de venta. La superficie construida y el distrito se amplifican mutuamente: un piso grande en Chamberí vale proporcionalmente mucho más que un piso del mismo tamaño en Vallecas.</p>
-            </div>
-            <div class="links"><a href="https://github.com/AlejandroBeldaFernandez/madrid-real-estate-prediction.git" target="_blank" rel="noopener">Ver repositorio ↗</a></div>
-          </div>
-        </details>
-
-        <details class="log-entry">
-          <summary>
-            <div class="log-summary-left">
-              <span class="log-id">REG · 03</span>
-              <span class="log-title">Análisis de Personalidad de Clientes</span>
-              <span class="log-metric">Silhouette 0.24</span>
-            </div>
-            <span class="log-caret">+</span>
-          </summary>
-          <div class="log-body">
-            <div class="meta-row">
-              <div><dt>Tipo</dt><dd>Clustering No Supervisado</dd></div>
-              <div><dt>Stack</dt><dd>Python · pandas · scikit-learn · umap-learn</dd></div>
-              <div><dt>Dataset</dt><dd>Kaggle — Customer Personality Analysis</dd></div>
-            </div>
-            <p>Segmenta a los clientes en 3 perfiles basados en datos demográficos, de gasto y de respuesta a campañas. Incluye detección de valores atípicos, PCA, K-Means con selección por Elbow/Silhouette y visualización con UMAP.</p>
-            <p><strong>Resultados (K-Means K=3 + PCA):</strong> Coeficiente Silhouette 0.24 · 3 segmentos identificados</p>
-            <div class="callout">
-              <span class="callout-label">En la práctica</span>
-              <p>Los clientes premium gastan 1.274 € de media sin necesitar descuentos. Los buscadores de ofertas compran 3,4 veces más con promociones, donde el presupuesto de descuento obtiene mayor ROI. Aplicar la misma campaña a los tres grupos es la peor asignación del gasto de marketing.</p>
-            </div>
-            <div class="links"><a href="https://github.com/AlejandroBeldaFernandez/Customer-Personality-Analysis.git" target="_blank" rel="noopener">Ver repositorio ↗</a></div>
-          </div>
-        </details>
-
-        <details class="log-entry">
-          <summary>
-            <div class="log-summary-left">
-              <span class="log-id">REG · 04</span>
-              <span class="log-title">MLOps Cancelación de Clientes en Telecomunicaciones</span>
-              <span class="log-metric">ROC-AUC 0.84</span>
-            </div>
-            <span class="log-caret">+</span>
-          </summary>
-          <div class="log-body">
-            <div class="meta-row">
-              <div><dt>Tipo</dt><dd>Pipeline MLOps · Clasificación Binaria</dd></div>
-              <div><dt>Stack</dt><dd>scikit-learn · Optuna · MLflow · Prefect · FastAPI · Evidently AI · Docker · Terraform</dd></div>
-              <div><dt>Dataset</dt><dd>Kaggle — IBM Telco Customer Churn</dd></div>
-            </div>
-            <p>Ciclo de vida de producción completo: validación de datos, ajuste con Optuna (150 pruebas), seguimiento con MLflow, orquestación con Prefect, monitoreo de deriva, reentrenamiento automatizado y un endpoint REST con FastAPI.</p>
-            <p><strong>Resultados (Random Forest + Optuna):</strong> ROC-AUC 0.84 · Precisión Balanceada 0.76 · Exhaustividad (churn) 0.76</p>
-            <div class="callout">
-              <span class="callout-label">En la práctica</span>
-              <p>El modelo identifica correctamente el 76% de los clientes que cancelarán antes de que lo hagan. El valor real está en la infraestructura: el pipeline se reentrena automáticamente solo cuando más del 40% de las características sufren deriva, y solo despliega un nuevo modelo si supera al actual.</p>
-            </div>
-            <div class="links">
-              <a href="https://github.com/AlejandroBeldaFernandez/MLOPS-Telco-Customer-Churn-Prediction.git" target="_blank" rel="noopener">Ver repositorio ↗</a>
-              <a href="https://huggingface.co/spaces/Alessandrou24/telco-churn-predictor" target="_blank" rel="noopener">Ver demo ↗</a>
-            </div>
-          </div>
-        </details>
-
-        <details class="log-entry">
-          <summary>
-            <div class="log-summary-left">
-              <span class="log-id">REG · 05</span>
-              <span class="log-title">Predicción de Ventas en Tiendas</span>
-              <span class="log-metric">RMSLE 0.381</span>
-            </div>
-            <span class="log-caret">+</span>
-          </summary>
-          <div class="log-body">
-            <div class="meta-row">
-              <div><dt>Tipo</dt><dd>Predicción de Series Temporales · Regresión de Datos de Panel</dd></div>
-              <div><dt>Stack</dt><dd>pandas · statsmodels · linearmodels · LightGBM · XGBoost · Optuna · SHAP</dd></div>
-              <div><dt>Dataset</dt><dd>Kaggle — Corporación Favorita (Ecuador)</dd></div>
-            </div>
-            <p>Predicción end-to-end sobre un panel de ventas minoristas de 3 millones de filas (1.782 series de tienda × familia de producto a lo largo de 4.5 años). Incluye diagnósticos de series temporales clásicas, una línea base PanelOLS y modelos de gradient boosting con validación cruzada temporal personalizada.</p>
-            <p><strong>Resultados (XGBoost + Optuna):</strong> RMSLE 0.381 · R² 0.977 · ~28% mejor que la línea base simple</p>
-            <div class="callout">
-              <span class="callout-label">En la práctica</span>
-              <p>Las predicciones dependen principalmente del impulso de ventas reciente. La palanca de alto impacto que el negocio realmente controla son las promociones, por lo que el modelo funciona como un simulador de escenarios antes de realizar un gasto.</p>
-            </div>
-            <div class="links"><a href="https://github.com/AlejandroBeldaFernandez/Store-Sales.git" target="_blank" rel="noopener">Ver repositorio ↗</a></div>
-          </div>
-        </details>
-
-        <details class="log-entry">
-          <summary>
-            <div class="log-summary-left">
-              <span class="log-id">REG · 06</span>
-              <span class="log-title">Análisis de Ventas en Cafeterías</span>
-              <span class="log-metric">SQL · 12 preguntas</span>
-            </div>
-            <span class="log-caret">+</span>
-          </summary>
-          <div class="log-body">
-            <div class="meta-row">
-              <div><dt>Tipo</dt><dd>EDA · Inteligencia de Negocio</dd></div>
-              <div><dt>Stack</dt><dd>PostgreSQL · Google Sheets · Metabase · Google Slides</dd></div>
-              <div><dt>Dataset</dt><dd>Maven Analytics — Coffee Shop Sales (NYC)</dd></div>
-            </div>
-            <p>Análisis de ventas de una cadena ficticia de tres cafeterías en Nueva York. Limpieza con SQL, 12 preguntas de negocio respondidas íntegramente en SQL, un cuadro de mando en Metabase y una presentación de narrativa de datos.</p>
-            <p><strong>Hallazgos clave:</strong> los ingresos casi se duplicaron de enero a junio. El café y el té generan el 66% de los ingresos. Solo 11 tipos de productos generan el 80% de los ingresos (regla de Pareto).</p>
-            <div class="callout">
-              <span class="callout-label">En la práctica</span>
-              <p>Un propietario puede usar esto para decidir qué productos promocionar, optimizar los turnos del personal en horas puntas y diseñar campañas para los meses de menor actividad.</p>
-            </div>
-            <div class="links"><a href="https://github.com/AlejandroBeldaFernandez/Coffee-Shop-Sales.git" target="_blank" rel="noopener">Ver repositorio ↗</a></div>
-          </div>
-        </details>
-
-        <details class="log-entry">
-          <summary>
-            <div class="log-summary-left">
-              <span class="log-id">REG · 07</span>
-              <span class="log-title">Reseñas de Amazon en Español</span>
-              <span class="log-metric">Macro F1 0.765</span>
-            </div>
-            <span class="log-caret">+</span>
-          </summary>
-          <div class="log-body">
-            <div class="meta-row">
-              <div><dt>Tipo</dt><dd>PLN · Aprendizaje Profundo · Recuperación de Información</dd></div>
-              <div><dt>Stack</dt><dd>PyTorch · Hugging Face Transformers · ChromaDB</dd></div>
-              <div><dt>Dataset</dt><dd>Amazon Reviews Multi — Subconjunto en español (208.899 reseñas)</dd></div>
-            </div>
-            <p>Un clasificador de sentimiento (línea base TF-IDF vs. BETO ajustado) y un sistema RAG que responde preguntas sobre el corpus, citando reseñas reales. Comparativa formal A/B con McNemar, bootstrap y análisis de coste por predicción.</p>
-            <p><strong>Resultados:</strong> BETO alcanza 0.765 de Macro F1 frente a 0.725 de la línea base (p = 1.3e-12), pero cuesta 1.009 veces más por predicción.</p>
-            <div class="callout">
-              <span class="callout-label">En la práctica</span>
-              <p>El clasificador indica cuántos clientes están insatisfechos y dónde; el sistema RAG explica por qué. Etiquetar todo el índice toma 10 segundos con la línea base frente a 2.8 horas con BETO: el coste determina la arquitectura.</p>
-            </div>
-            <div class="links">
-              <a href="https://github.com/AlejandroBeldaFernandez/Amazon-Reviews-Spanish.git" target="_blank" rel="noopener">Ver repositorio ↗</a>
-              <a href="https://huggingface.co/spaces/Alessandrou24/Amazon-Reviews-Spanish" target="_blank" rel="noopener">Ver demo ↗</a>
-            </div>
-          </div>
-        </details>
-
-        <details class="log-entry">
-          <summary>
-            <div class="log-summary-left">
-              <span class="log-id">REG · 08</span>
-              <span class="log-title">Sistema de Recomendación de Películas</span>
-              <span class="log-metric">Precisión@5 42.4%</span>
-            </div>
-            <span class="log-caret">+</span>
-          </summary>
-          <div class="log-body">
-            <div class="meta-row">
-              <div><dt>Tipo</dt><dd>Sistemas de Recomendación · Factorización de Matrices</dd></div>
-              <div><dt>Stack</dt><dd>pandas · scikit-learn · Surprise (SVD) · Gradio</dd></div>
-              <div><dt>Dataset</dt><dd>The Movies Dataset — 7.818 películas, ~100.000 valoraciones</dd></div>
-            </div>
-            <p>Tres sistemas comparados sobre el mismo catálogo: basado en contenido, filtrado colaborativo basado en ítems y SVD. Evaluados con Precisión@5/Exhaustividad@5, documentando el arranque en frío y la cobertura en lugar de combinarlos en una sola clasificación.</p>
-            <p><strong>Resultados:</strong> el filtrado colaborativo supera por 7-8x, pero solo cubre el 43% del catálogo con suficiente historial de valoraciones.</p>
-            <div class="callout">
-              <span class="callout-label">En la práctica</span>
-              <p>Los tres modelos son complementarios, no competidores. Un producto real necesita los tres, además de una alternativa explícita para el 57% del catálogo que el filtrado colaborativo y SVD no pueden alcanzar.</p>
-            </div>
-            <div class="links">
-              <a href="https://github.com/AlejandroBeldaFernandez/Movies_Recommendations" target="_blank" rel="noopener">Ver repositorio ↗</a>
-              <a href="https://huggingface.co/spaces/Alessandrou24/movie__Recommender" target="_blank" rel="noopener">Ver demo ↗</a>
-            </div>
-          </div>
-        </details>
-
-        <details class="log-entry">
-          <summary>
-            <div class="log-summary-left">
-              <span class="log-id">REG · 09</span>
-              <span class="log-title">Clasificación de Imágenes de Productos de Moda</span>
-              <span class="log-metric">Precisión 99%</span>
-            </div>
-            <span class="log-caret">+</span>
-          </summary>
-          <div class="log-body">
-            <div class="meta-row">
-              <div><dt>Tipo</dt><dd>Visión por Computador · Transfer Learning · Grad-CAM</dd></div>
-              <div><dt>Stack</dt><dd>PyTorch · torchvision · Grad-CAM</dd></div>
-              <div><dt>Dataset</dt><dd>Fashion Product Images — 43.946 productos</dd></div>
-            </div>
-            <p>EfficientNetB0 y ResNet50 comparados en la misma tarea de clasificación, interpretados con Grad-CAM en lugar de dejarlos como una caja negra. 3 de las 7 categorías originales fueron descartadas por falta de datos suficientes.</p>
-            <p><strong>Resultados:</strong> ResNet50 supera a EfficientNetB0 en cada clase y métrica (99% vs. 97% de precisión).</p>
-            <div class="callout">
-              <span class="callout-label">En la práctica</span>
-              <p>Accesorios y Ropa representan el 63% de todos los errores: Grad-CAM muestra que la atención del modelo se centra en el accesorio en lugar de la prenda etiquetada, un modo de fallo específico y comprendido, no ruido aleatorio.</p>
-            </div>
-            <div class="links"><a href="https://github.com/AlejandroBeldaFernandez/Fashion-Product-Images" target="_blank" rel="noopener">Ver repositorio ↗</a></div>
-          </div>
-        </details>
-
-        <details class="log-entry">
-          <summary>
-            <div class="log-summary-left">
-              <span class="log-id">REG · 10</span>
-              <span class="log-title">Generador Automatizado de Reportes de Noticias</span>
-              <span class="log-metric">Autoalojado</span>
-            </div>
-            <span class="log-caret">+</span>
-          </summary>
-          <div class="log-body">
-            <div class="meta-row">
-              <div><dt>Tipo</dt><dd>Web Scraping · Orquestación · LLM Local</dd></div>
-              <div><dt>Stack</dt><dd>Playwright · Prefect · SQLite · Qwen2.5 · Docker · Tailscale Funnel</dd></div>
-              <div><dt>Fuente</dt><dd>Sitemap de RTVE Google News</dd></div>
-            </div>
-            <p>Pipeline completo verificado contra el servicio real en cada paso, no sobre su documentación. El destino de despliegue planificado (Hugging Face Spaces) no resultó viable, por lo que el proyecto terminó autoalojado mediante Docker + Tailscale Funnel.</p>
-            <p><strong>Resultado:</strong> un informe diario funcional con citas de fuentes en cada entrada.</p>
-            <div class="callout">
-              <span class="callout-label">En la práctica</span>
-              <p>El cuadro de mando solo está accesible mientras la máquina local esté encendida, no 24/7: la compensación honesta de un despliegue genuinamente gratuito.</p>
-            </div>
+            <p>Sistema automático end-to-end que recopila noticias web cotidianas, procesa y sintetiza información con IA local y despliega resúmenes diarios con fuentes citadas. Desplegado en entorno propio sobre Linux.</p>
             <div class="links">
               <a href="https://github.com/AlejandroBeldaFernandez/Automated-News-Report" target="_blank" rel="noopener">Ver repositorio ↗</a>
-              <a href="https://alex-server.taile13699.ts.net/" target="_blank" rel="noopener">Ver demo ↗</a>
             </div>
           </div>
         </details>
@@ -525,22 +295,83 @@
         <details class="log-entry">
           <summary>
             <div class="log-summary-left">
-              <span class="log-id">EXTRA</span>
-              <span class="log-title">Nube: Inferencia ML Serverless en AWS y Azure</span>
-              <span class="log-metric">Serverless</span>
+              <span class="log-id">PROY · 02</span>
+              <span class="log-title">Arquitectura MLOps Churn Telco</span>
+              <span class="log-metric">Pipeline de Producción</span>
             </div>
             <span class="log-caret">+</span>
           </summary>
           <div class="log-body">
             <div class="meta-row">
-              <div><dt>Tipo</dt><dd>Despliegue en la Nube · Arquitectura Serverless</dd></div>
-              <div><dt>Stack</dt><dd>AWS S3 · Lambda · API Gateway · Azure Blob Storage · Azure Functions</dd></div>
-              <div><dt>Dataset</dt><dd>Iris (AWS) · Diabetes (Azure) — casos de estudio mínimos</dd></div>
+              <div><dt>Tipo</dt><dd>Pipeline MLOps · REST API</dd></div>
+              <div><dt>Stack</dt><dd>Python · FastAPI · MLflow · Prefect · Docker · Terraform</dd></div>
             </div>
-            <p>Dos proyectos pequeños y autosuficientes que demuestran habilidades prácticas en ambas nubes: modelos servidos a través de un endpoint HTTP público, sin servidores que administrar. El foco está en la arquitectura y los problemas reales resueltos en el camino (permisos IAM, límites de paquetes, restricciones de región).</p>
+            <p>Aplicación completa orientada a producción que incluye validación de datos, pipelines de entrenamiento automatizado, monitorización de deriva y API RESTful empaquetada con Docker.</p>
             <div class="links">
-              <a href="https://github.com/AlejandroBeldaFernandez/AWS-Iris-Prediction.git" target="_blank" rel="noopener">Repo AWS ↗</a>
-              <a href="https://github.com/AlejandroBeldaFernandez/Azure-Diabetes-Prediction.git" target="_blank" rel="noopener">Repo Azure ↗</a>
+              <a href="https://github.com/AlejandroBeldaFernandez/MLOPS-Telco-Customer-Churn-Prediction.git" target="_blank" rel="noopener">Ver repositorio ↗</a>
+            </div>
+          </div>
+        </details>
+
+        <details class="log-entry">
+          <summary>
+            <div class="log-summary-left">
+              <span class="log-id">PROY · 03</span>
+              <span class="log-title">Plataforma de Recomendación de Películas</span>
+              <span class="log-metric">Servicio Web Interactivo</span>
+            </div>
+            <span class="log-caret">+</span>
+          </summary>
+          <div class="log-body">
+            <div class="meta-row">
+              <div><dt>Tipo</dt><dd>Sistema de Recomendación · Interfaz Web</dd></div>
+              <div><dt>Stack</dt><dd>Python · Gradio · scikit-learn · Factorización de Matrices</dd></div>
+            </div>
+            <p>Motor de recomendación de contenidos personalizado que integra algoritmos basados en contenido y filtrado colaborativo con una interfaz web limpia para el usuario.</p>
+            <div class="links">
+              <a href="https://github.com/AlejandroBeldaFernandez/Movies_Recommendations" target="_blank" rel="noopener">Ver repositorio ↗</a>
+            </div>
+          </div>
+        </details>
+
+        <details class="log-entry">
+          <summary>
+            <div class="log-summary-left">
+              <span class="log-id">PROY · 04</span>
+              <span class="log-title">Sistema de Analítica de Ventas de Cafetería</span>
+              <span class="log-metric">SQL &amp; Motor BI</span>
+            </div>
+            <span class="log-caret">+</span>
+          </summary>
+          <div class="log-body">
+            <div class="meta-row">
+              <div><dt>Tipo</dt><dd>Diseño de BBDD · Business Intelligence</dd></div>
+              <div><dt>Stack</dt><dd>PostgreSQL · SQL · Metabase</dd></div>
+            </div>
+            <p>Modelado de base de datos, transformaciones complejas en SQL y creación de cuadros de mando interactivos para responder a preguntas clave de negocio.</p>
+            <div class="links">
+              <a href="https://github.com/AlejandroBeldaFernandez/Coffee-Shop-Sales.git" target="_blank" rel="noopener">Ver repositorio ↗</a>
+            </div>
+          </div>
+        </details>
+
+        <details class="log-entry">
+          <summary>
+            <div class="log-summary-left">
+              <span class="log-id">PROY · 05</span>
+              <span class="log-title">Sistema de Análisis de Reseñas Amazon en Español</span>
+              <span class="log-metric">Aplicación NLP &amp; RAG</span>
+            </div>
+            <span class="log-caret">+</span>
+          </summary>
+          <div class="log-body">
+            <div class="meta-row">
+              <div><dt>Tipo</dt><dd>Aplicación NLP · Asistente de Recuperación</dd></div>
+              <div><dt>Stack</dt><dd>PyTorch · Hugging Face · ChromaDB · Python</dd></div>
+            </div>
+            <p>Sistema de clasificación de opiniones combinado con un asistente RAG (Retrieval-Augmented Generation) que permite consultar el catálogo de opiniones y responder preguntas automáticamente.</p>
+            <div class="links">
+              <a href="https://github.com/AlejandroBeldaFernandez/Amazon-Reviews-Spanish.git" target="_blank" rel="noopener">Ver repositorio ↗</a>
             </div>
           </div>
         </details>
@@ -564,7 +395,7 @@
         </div>
       </div>
     </div>
-    <p class="colophon">© 2026 Alejandro Belda Fernández. Creado con HTML y CSS, sin frameworks.</p>
+    <p class="colophon">© 2026 Alejandro Belda Fernández. Desarrollado con HTML y CSS.</p>
   </div>
 </footer>
 
