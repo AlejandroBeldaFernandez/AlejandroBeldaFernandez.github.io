@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alejandro Belda Fernández — Data &amp; Artificial Intelligence Portfolio</title>
-<meta name="description" content="Portfolio of Alejandro Belda Fernández: software, data engineering, MLOps and AI projects with measured, documented results.">
-<meta property="og:title" content="Alejandro Belda Fernández — Data & Artificial Intelligence Portfolio">
-<meta property="og:description" content="Software, data engineering, MLOps and AI projects with measured, documented results.">
+<title>Alejandro Belda Fernández — Software Engineering &amp; Full Stack Portfolio</title>
+<meta name="description" content="Portfolio of Alejandro Belda Fernández: Full Stack software development, Linux administration, Python, Java, SQL, and AI projects.">
+<meta property="og:title" content="Alejandro Belda Fernández — Software & Full Stack Portfolio">
+<meta property="og:description" content="Software development, web applications, Linux infrastructure, and AI engineering projects.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -86,19 +86,11 @@
   .pill-row{display:flex;flex-wrap:wrap;gap:9px;}
   .pill{font-family:var(--font-mono);font-size:12.5px;background:var(--chip-bg);color:var(--chip-fg);padding:7px 12px;border-radius:3px;letter-spacing:0.01em;}
 
-  .card-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px,1fr));gap:20px;}
-  .card{border:1px solid var(--line);border-radius:var(--radius);background:var(--paper-alt);padding:24px;display:flex;flex-direction:column;gap:14px;}
-  .card .tag{font-family:var(--font-mono);font-size:11.5px;color:var(--blue);text-transform:uppercase;letter-spacing:0.08em;}
-  .card h3{font-size:19px;line-height:1.3;}
-  .card p{font-size:14.5px;color:var(--ink-soft);margin:0;flex-grow:1;}
-  .card .links{display:flex;gap:14px;margin-top:4px;}
-  .card .links a{font-family:var(--font-mono);font-size:12.5px;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);}
-  .card .links a:hover{color:var(--blue);border-color:var(--blue);}
-
-  .oss-card{border:1px solid var(--line);border-radius:var(--radius);padding:30px;display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start;}
-  .oss-card .icon{font-family:var(--font-mono);font-size:12px;color:var(--paper);background:var(--ink);padding:6px 10px;border-radius:3px;height:fit-content;}
+  .oss-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  .oss-card{border:1px solid var(--line);border-radius:var(--radius);padding:30px;display:flex;flex-direction:column;justify-content:space-between;background:var(--paper-alt);}
+  .oss-card .icon{font-family:var(--font-mono);font-size:12px;color:var(--paper);background:var(--ink);padding:6px 10px;border-radius:3px;height:fit-content;width:fit-content;margin-bottom:14px;}
   .oss-card h3{font-size:20px;margin-bottom:10px;}
-  .oss-card p{color:var(--ink-soft);font-size:15px;}
+  .oss-card p{color:var(--ink-soft);font-size:15px;margin-bottom:18px;}
 
   .log-entry{border-bottom:1px solid var(--line);}
   .log-entry summary{cursor:pointer;list-style:none;padding:22px 0;display:flex;align-items:center;justify-content:space-between;gap:18px;}
@@ -131,10 +123,10 @@
 
   @media (max-width: 780px){
     .about-grid{grid-template-columns:1fr;}
+    .oss-grid{grid-template-columns:1fr;}
     nav.links{position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--paper);flex-direction:column;align-items:flex-start;padding:28px;gap:20px;transform:translateY(-110%);transition:transform .2s ease;border-top:1px solid var(--line);}
     nav.links.open{transform:translateY(0);}
     .nav-toggle{display:block;}
-    .oss-card{grid-template-columns:1fr;}
   }
 </style>
 </head>
@@ -147,9 +139,8 @@
     <nav class="links" id="navLinks">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
+      <a href="#featured">Featured</a>
       <a href="#projects">Projects</a>
-      <a href="#opensource">Open Source</a>
-      <a href="CV.pdf" target="_blank" rel="noopener">View CV</a>
       <a href="#contact">Contact</a>
       <a class="lang" href="index-es.html">ES</a>
       <a class="cta" href="https://github.com/AlejandroBeldaFernandez" target="_blank" rel="noopener">GitHub ↗</a>
@@ -161,10 +152,10 @@
 
   <section class="hero">
     <div class="container">
-      <span class="eyebrow">// Data &amp; Artificial Intelligence Portfolio</span>
+      <span class="eyebrow">// Software &amp; Full Stack Development Portfolio</span>
       <h1>Alejandro Belda Fernández</h1>
-      <div class="role">Computer Engineer · AI &amp; Data · Python · SQL · Machine Learning</div>
-      <p class="lead">A collection of my software, data engineering, and AI projects — the code, the results, and what I learned along the way.</p>
+      <div class="role">Computer Engineer · Software Developer · Python · Java · HTML/CSS · SQL · Linux</div>
+      <p class="lead">A showcase of my software engineering, web development, and AI projects — clean architecture, robust code, and practical implementations.</p>
       <div class="cta-row">
         <a class="btn btn-primary" href="#projects">View projects</a>
         <a class="btn btn-outline" href="https://www.linkedin.com/in/alejandro-belda-fern%C3%A1ndez-0677903b0/" target="_blank" rel="noopener">LinkedIn</a>
@@ -179,17 +170,17 @@
         <div>
           <span class="eyebrow">// About</span>
           <h2 style="margin-bottom:20px;">Background</h2>
-          <p>Computer Science graduate from the University of Murcia with a Master's degree in Artificial Intelligence. I spent one year working as a researcher (PDI) at the Faculty of Computer Science (UMU), carrying out the processing of complex data, predictive model development, open-source software development, and Linux infrastructure management. This gave me a strong foundation in data quality, methodological rigor, and working with complex real-world datasets. I am now seeking opportunities in the technology industry.</p>
-          <p>I enjoy the full pipeline: understanding the business problem, cleaning and transforming messy data, exploring it with the right questions, building models that actually work in context, and communicating results clearly. I care about honest evaluation, documented decisions, and conclusions that non-technical stakeholders can act on.</p>
+          <p>Computer Science graduate from the University of Murcia with a Master's degree in Artificial Intelligence. Experienced as a researcher (PDI) at the Faculty of Computer Science (UMU) in software development, web development, open-source library creation, and Linux server infrastructure management.</p>
+          <p>Combining a solid computer engineering foundation with strong problem-solving skills and web technologies. Experienced in constructing complete end-to-end software solutions, managing servers, and integrating AI algorithms into functional software applications.</p>
         </div>
         <div class="facts">
           <dl>
             <div class="row"><dt>Availability</dt><dd>Immediate</dd></div>
-            <div class="row"><dt>Seeking</dt><dd>Data &amp; Artificial Intelligence Engineer</dd></div>
-            <div class="row"><dt>Education</dt><dd>Computer Engineering and Master's in Artificial Intelligence — University of Murcia</dd></div>
-            <div class="row"><dt>Prior experience</dt><dd>1 year as a researcher (PDI) at Faculty of Computer Science (UMU)</dd></div>
+            <div class="row"><dt>Role</dt><dd>Software / Full Stack Developer</dd></div>
+            <div class="row"><dt>Education</dt><dd>B.Sc. Computer Engineering &amp; M.Sc. Artificial Intelligence (UMU)</dd></div>
+            <div class="row"><dt>Experience</dt><dd>Research Assistant (PDI) — Faculty of Computer Science, UMU</dd></div>
+            <div class="row"><dt>Location</dt><dd>Abarán, Region of Murcia, Spain</dd></div>
             <div class="row"><dt>Languages</dt><dd>Spanish (native) · English (B2)</dd></div>
-            <div class="row"><dt>Contact</dt><dd>alejandrobeldafernandez@gmail.com</dd></div>
           </dl>
         </div>
       </div>
@@ -202,47 +193,67 @@
     <div class="container">
       <div class="section-head">
         <span class="eyebrow">// Skills</span>
-        <h2>Working stack</h2>
+        <h2>Technical Stack</h2>
       </div>
 
       <div class="skill-group">
-        <h3>Data Analysis &amp; Visualization</h3>
+        <h3>Languages &amp; Web Development</h3>
         <div class="pill-row">
-          <span class="pill">Pandas</span><span class="pill">NumPy</span><span class="pill">Matplotlib</span>
-          <span class="pill">Seaborn</span><span class="pill">Metabase</span><span class="pill">Excel</span>
-        </div>
-      </div>
-
-      <div class="skill-group">
-        <h3>Data Science &amp; AI</h3>
-        <div class="pill-row">
-          <span class="pill">Python</span><span class="pill">Machine Learning</span><span class="pill">Deep Learning</span>
-          <span class="pill">NLP</span><span class="pill">Predictive Modeling</span><span class="pill">MLOps</span>
+          <span class="pill">Python</span><span class="pill">Java</span>
+          <span class="pill">HTML</span><span class="pill">CSS</span>
         </div>
       </div>
 
       <div class="skill-group">
         <h3>Databases</h3>
         <div class="pill-row">
-          <span class="pill">SQL</span><span class="pill">ETL Pipelines</span>
+          <span class="pill">SQL</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>Systems &amp; DevOps</h3>
+        <div class="pill-row">
+          <span class="pill">Linux (Server Administration)</span><span class="pill">Git</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>Libraries &amp; AI</h3>
+        <div class="pill-row">
+          <span class="pill">Machine Learning</span><span class="pill">Deep Learning</span><span class="pill">NLP</span>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="opensource">
+  <section id="featured">
     <div class="container">
       <div class="section-head">
-        <span class="eyebrow">// Open Source</span>
-        <h2>Published independently</h2>
+        <span class="eyebrow">// Featured Work</span>
+        <h2>Web Development &amp; Open Source</h2>
       </div>
-      <div class="oss-card">
-        <span class="icon">PyPI</span>
-        <div>
-          <h3>calm-data-generator</h3>
-          <p>Python library for data manipulation, synthetic tabular data generation, and quality analysis, developed during my time as a researcher. It wraps several generation backends behind a single unified interface, simulates concept drift to test how models degrade, and produces an automated data quality report for every dataset generated.</p>
-          <div class="links" style="margin-top:16px;">
-            <a href="https://github.com/AlejandroBeldaFernandez/Calm-Data-Generator" target="_blank" rel="noopener">View repository ↗</a>
+
+      <div class="oss-grid">
+        <div class="oss-card">
+          <div>
+            <span class="icon">Web Project</span>
+            <h3>AIKE Research Group Website</h3>
+            <p>Design, creation, and maintenance of the official website for the AIKE research group (Artificial Intelligence and Knowledge Engineering) at the University of Murcia.</p>
+          </div>
+          <div class="links">
+            <a href="https://www.um.es/web/aike/" target="_blank" rel="noopener">Visit Website ↗</a>
+          </div>
+        </div>
+
+        <div class="oss-card">
+          <div>
+            <span class="icon">PyPI Package</span>
+            <h3>calm-data-generator</h3>
+            <p>Python library for data manipulation, synthetic tabular data generation, and quality analysis, developed during my time as a researcher at UMU and published on PyPI.</p>
+          </div>
+          <div class="links">
+            <a href="https://github.com/AlejandroBeldaFernandez/Calm-Data-Generator" target="_blank" rel="noopener">View Repository ↗</a>
           </div>
         </div>
       </div>
@@ -254,8 +265,8 @@
   <section class="tight" id="projects" style="padding-top:88px;">
     <div class="container">
       <div class="section-head">
-        <span class="eyebrow">// Full Log</span>
-        <h2>All ten projects, entry by entry</h2>
+        <span class="eyebrow">// Software Projects</span>
+        <h2>Software Development &amp; Systems</h2>
       </div>
 
       <div class="log">
@@ -263,261 +274,20 @@
         <details class="log-entry">
           <summary>
             <div class="log-summary-left">
-              <span class="log-id">LOG · 01</span>
-              <span class="log-title">Madrid Traffic Accident Injury Prediction</span>
-              <span class="log-metric">ROC AUC 0.873</span>
-            </div>
-            <span class="log-caret">+</span>
-          </summary>
-          <div class="log-body">
-            <div class="meta-row">
-              <div><dt>Type</dt><dd>Classification</dd></div>
-              <div><dt>Stack</dt><dd>Python · pandas · scikit-learn · CatBoost · Optuna · SHAP</dd></div>
-              <div><dt>Dataset</dt><dd>Madrid City Council open data (2019–2023)</dd></div>
-            </div>
-            <p>Predicts whether a traffic accident in Madrid will result in at least one injured person, using information available at the time it is reported. Covers person-to-accident aggregation, feature engineering, Optuna tuning and SHAP explainability.</p>
-            <p><strong>Results (CatBoost):</strong> ROC AUC 0.873 · Balanced Accuracy 0.801 · Macro F1 0.73</p>
-            <div class="callout">
-              <span class="callout-label">In practice</span>
-              <p>Out of every 10 accidents predicted as involving injuries, 8 to 9 are correct. The remaining errors are mostly false alarms rather than missed injuries — the safer type of mistake in an emergency context.</p>
-            </div>
-            <div class="links"><a href="https://github.com/AlejandroBeldaFernandez/madrid-traffic-accidents" target="_blank" rel="noopener">View repository ↗</a></div>
-          </div>
-        </details>
-
-        <details class="log-entry">
-          <summary>
-            <div class="log-summary-left">
-              <span class="log-id">LOG · 02</span>
-              <span class="log-title">Madrid Real Estate Price Prediction</span>
-              <span class="log-metric">R² 0.897</span>
-            </div>
-            <span class="log-caret">+</span>
-          </summary>
-          <div class="log-body">
-            <div class="meta-row">
-              <div><dt>Type</dt><dd>Regression</dd></div>
-              <div><dt>Stack</dt><dd>Python · pandas · scikit-learn · XGBoost · Optuna · SHAP</dd></div>
-              <div><dt>Dataset</dt><dd>Kaggle — Madrid residential property listings</dd></div>
-            </div>
-            <p>Predicts the sale price of residential properties in Madrid from physical characteristics and location. Includes TargetEncoder for district encoding, Optuna tuning, bootstrap confidence intervals and SHAP explainability.</p>
-            <p><strong>Results (XGBoost):</strong> RMSE €69,568 · R² 0.897 · MAPE 15.27%</p>
-            <div class="callout">
-              <span class="callout-label">In practice</span>
-              <p>On average, the predicted price is within 15% of the actual sale price. Built area and district amplify each other: a large flat in Chamberí is worth disproportionately more than an equally large flat in Vallecas.</p>
-            </div>
-            <div class="links"><a href="https://github.com/AlejandroBeldaFernandez/madrid-real-estate-prediction.git" target="_blank" rel="noopener">View repository ↗</a></div>
-          </div>
-        </details>
-
-        <details class="log-entry">
-          <summary>
-            <div class="log-summary-left">
-              <span class="log-id">LOG · 03</span>
-              <span class="log-title">Customer Personality Analysis</span>
-              <span class="log-metric">Silhouette 0.24</span>
-            </div>
-            <span class="log-caret">+</span>
-          </summary>
-          <div class="log-body">
-            <div class="meta-row">
-              <div><dt>Type</dt><dd>Unsupervised Clustering</dd></div>
-              <div><dt>Stack</dt><dd>Python · pandas · scikit-learn · umap-learn</dd></div>
-              <div><dt>Dataset</dt><dd>Kaggle — Customer Personality Analysis</dd></div>
-            </div>
-            <p>Segments customers into 3 profiles based on demographic, spending and campaign response data. Includes outlier detection, PCA, K-Means with Elbow/Silhouette selection and UMAP visualisation.</p>
-            <p><strong>Results (K-Means K=3 + PCA):</strong> Silhouette Score 0.24 · 3 segments identified</p>
-            <div class="callout">
-              <span class="callout-label">In practice</span>
-              <p>Premium customers spend €1,274 on average without needing discounts. Deal Seekers buy 3.4x more with promotions — that's where discount budgets have the highest ROI. Applying the same campaign to all three is the worst allocation of marketing spend.</p>
-            </div>
-            <div class="links"><a href="https://github.com/AlejandroBeldaFernandez/Customer-Personality-Analysis.git" target="_blank" rel="noopener">View repository ↗</a></div>
-          </div>
-        </details>
-
-        <details class="log-entry">
-          <summary>
-            <div class="log-summary-left">
-              <span class="log-id">LOG · 04</span>
-              <span class="log-title">MLOps Telco Customer Churn</span>
-              <span class="log-metric">ROC-AUC 0.84</span>
-            </div>
-            <span class="log-caret">+</span>
-          </summary>
-          <div class="log-body">
-            <div class="meta-row">
-              <div><dt>Type</dt><dd>MLOps Pipeline · Binary Classification</dd></div>
-              <div><dt>Stack</dt><dd>scikit-learn · Optuna · MLflow · Prefect · FastAPI · Evidently AI · Docker · Terraform</dd></div>
-              <div><dt>Dataset</dt><dd>Kaggle — IBM Telco Customer Churn</dd></div>
-            </div>
-            <p>Full production lifecycle: data validation, Optuna tuning (150 trials), MLflow tracking, Prefect orchestration, drift monitoring, automated retraining and a FastAPI REST endpoint.</p>
-            <p><strong>Results (Random Forest + Optuna):</strong> ROC-AUC 0.84 · Balanced Accuracy 0.76 · Recall (churn) 0.76</p>
-            <div class="callout">
-              <span class="callout-label">In practice</span>
-              <p>The model correctly identifies 76% of customers who will cancel before they do. The real value is the infrastructure: the pipeline retrains automatically only when more than 40% of features drift, and only promotes a new model if it beats the current one.</p>
-            </div>
-            <div class="links">
-              <a href="https://github.com/AlejandroBeldaFernandez/MLOPS-Telco-Customer-Churn-Prediction.git" target="_blank" rel="noopener">View repository ↗</a>
-              <a href="https://huggingface.co/spaces/Alessandrou24/telco-churn-predictor" target="_blank" rel="noopener">View demo ↗</a>
-            </div>
-          </div>
-        </details>
-
-        <details class="log-entry">
-          <summary>
-            <div class="log-summary-left">
-              <span class="log-id">LOG · 05</span>
-              <span class="log-title">Store Sales Forecasting</span>
-              <span class="log-metric">RMSLE 0.381</span>
-            </div>
-            <span class="log-caret">+</span>
-          </summary>
-          <div class="log-body">
-            <div class="meta-row">
-              <div><dt>Type</dt><dd>Time Series Forecasting · Panel Data Regression</dd></div>
-              <div><dt>Stack</dt><dd>pandas · statsmodels · linearmodels · LightGBM · XGBoost · Optuna · SHAP</dd></div>
-              <div><dt>Dataset</dt><dd>Kaggle — Corporación Favorita (Ecuador)</dd></div>
-            </div>
-            <p>End-to-end forecasting on a 3-million-row retail panel (1,782 store × product-family series over 4.5 years). Includes classical time series diagnostics, a PanelOLS baseline and gradient-boosting models with custom time-series cross-validation.</p>
-            <p><strong>Results (XGBoost + Optuna):</strong> RMSLE 0.381 · R² 0.977 · ~28% better than the naive baseline</p>
-            <div class="callout">
-              <span class="callout-label">In practice</span>
-              <p>Predictions are driven mostly by recent sales momentum. The one high-impact lever the business actually controls is promotions, so the model doubles as a scenario simulator before a single dollar is spent.</p>
-            </div>
-            <div class="links"><a href="https://github.com/AlejandroBeldaFernandez/Store-Sales.git" target="_blank" rel="noopener">View repository ↗</a></div>
-          </div>
-        </details>
-
-        <details class="log-entry">
-          <summary>
-            <div class="log-summary-left">
-              <span class="log-id">LOG · 06</span>
-              <span class="log-title">Coffee Shop Sales Analysis</span>
-              <span class="log-metric">SQL · 12 questions</span>
-            </div>
-            <span class="log-caret">+</span>
-          </summary>
-          <div class="log-body">
-            <div class="meta-row">
-              <div><dt>Type</dt><dd>EDA · Business Intelligence</dd></div>
-              <div><dt>Stack</dt><dd>PostgreSQL · Google Sheets · Metabase · Google Slides</dd></div>
-              <div><dt>Dataset</dt><dd>Maven Analytics — Coffee Shop Sales (NYC)</dd></div>
-            </div>
-            <p>Sales analysis of a fictitious three-location coffee shop chain in NYC. SQL cleaning, 12 business questions answered entirely in SQL, a Metabase dashboard and a data storytelling presentation.</p>
-            <p><strong>Key findings:</strong> revenue nearly doubled from January to June. Coffee and Tea drive 66% of revenue. Only 11 product types generate 80% of revenue (Pareto rule).</p>
-            <div class="callout">
-              <span class="callout-label">In practice</span>
-              <p>An owner can use this to decide which products to promote, optimise staff shifts around peak hours, and design campaigns for the weakest months.</p>
-            </div>
-            <div class="links"><a href="https://github.com/AlejandroBeldaFernandez/Coffee-Shop-Sales.git" target="_blank" rel="noopener">View repository ↗</a></div>
-          </div>
-        </details>
-
-        <details class="log-entry">
-          <summary>
-            <div class="log-summary-left">
-              <span class="log-id">LOG · 07</span>
-              <span class="log-title">Amazon Reviews Spanish</span>
-              <span class="log-metric">Macro F1 0.765</span>
-            </div>
-            <span class="log-caret">+</span>
-          </summary>
-          <div class="log-body">
-            <div class="meta-row">
-              <div><dt>Type</dt><dd>NLP · Deep Learning · Retrieval</dd></div>
-              <div><dt>Stack</dt><dd>PyTorch · Hugging Face Transformers · ChromaDB</dd></div>
-              <div><dt>Dataset</dt><dd>Amazon Reviews Multi — Spanish subset (208,899 reviews)</dd></div>
-            </div>
-            <p>A sentiment classifier (TF-IDF baseline vs. fine-tuned BETO) and a RAG system that answers questions about the corpus, citing real reviews. Formal A/B comparison with McNemar, bootstrap and cost-per-prediction analysis.</p>
-            <p><strong>Results:</strong> BETO reaches 0.765 macro F1 vs. 0.725 for the baseline (p = 1.3e-12), but costs 1,009× more per prediction.</p>
-            <div class="callout">
-              <span class="callout-label">In practice</span>
-              <p>The classifier says how many customers are unhappy and where; the RAG system says why. Labelling the full index takes 10 seconds with the baseline vs. 2.8 hours with BETO — cost decides the architecture.</p>
-            </div>
-            <div class="links">
-              <a href="https://github.com/AlejandroBeldaFernandez/Amazon-Reviews-Spanish.git" target="_blank" rel="noopener">View repository ↗</a>
-              <a href="https://huggingface.co/spaces/Alessandrou24/Amazon-Reviews-Spanish" target="_blank" rel="noopener">View demo ↗</a>
-            </div>
-          </div>
-        </details>
-
-        <details class="log-entry">
-          <summary>
-            <div class="log-summary-left">
-              <span class="log-id">LOG · 08</span>
-              <span class="log-title">Movie Recommendation System</span>
-              <span class="log-metric">Precision@5 42.4%</span>
-            </div>
-            <span class="log-caret">+</span>
-          </summary>
-          <div class="log-body">
-            <div class="meta-row">
-              <div><dt>Type</dt><dd>Recommender Systems · Matrix Factorization</dd></div>
-              <div><dt>Stack</dt><dd>pandas · scikit-learn · Surprise (SVD) · Gradio</dd></div>
-              <div><dt>Dataset</dt><dd>The Movies Dataset — 7,818 movies, ~100,000 ratings</dd></div>
-            </div>
-            <p>Three systems compared on the same catalog: content-based, item-based collaborative filtering, and SVD. Evaluated with Precision@5/Recall@5, documenting cold start and coverage rather than blending them into one ranking.</p>
-            <p><strong>Results:</strong> collaborative filtering wins by 7-8x, but only covers 43% of the catalog with enough rating history.</p>
-            <div class="callout">
-              <span class="callout-label">In practice</span>
-              <p>The three models are complements, not competitors. A real product needs all three, plus an explicit fallback for the 57% of the catalog collaborative and SVD cannot reach.</p>
-            </div>
-            <div class="links">
-              <a href="https://github.com/AlejandroBeldaFernandez/Movies_Recommendations" target="_blank" rel="noopener">View repository ↗</a>
-              <a href="https://huggingface.co/spaces/Alessandrou24/movie__Recommender" target="_blank" rel="noopener">View demo ↗</a>
-            </div>
-          </div>
-        </details>
-
-        <details class="log-entry">
-          <summary>
-            <div class="log-summary-left">
-              <span class="log-id">LOG · 09</span>
-              <span class="log-title">Fashion Product Images Classification</span>
-              <span class="log-metric">Accuracy 99%</span>
-            </div>
-            <span class="log-caret">+</span>
-          </summary>
-          <div class="log-body">
-            <div class="meta-row">
-              <div><dt>Type</dt><dd>Computer Vision · Transfer Learning · Grad-CAM</dd></div>
-              <div><dt>Stack</dt><dd>PyTorch · torchvision · Grad-CAM</dd></div>
-              <div><dt>Dataset</dt><dd>Fashion Product Images — 43,946 products</dd></div>
-            </div>
-            <p>EfficientNetB0 and ResNet50 compared on the same classification task, interpreted with Grad-CAM instead of left as a black box. 3 of 7 original categories were dropped for insufficient data.</p>
-            <p><strong>Results:</strong> ResNet50 beats EfficientNetB0 on every class and metric (99% vs. 97% accuracy).</p>
-            <div class="callout">
-              <span class="callout-label">In practice</span>
-              <p>Accessories and Apparel account for 63% of all errors: Grad-CAM shows the model's attention locks onto the accessory instead of the labeled garment — a specific, understood failure mode, not random noise.</p>
-            </div>
-            <div class="links"><a href="https://github.com/AlejandroBeldaFernandez/Fashion-Product-Images" target="_blank" rel="noopener">View repository ↗</a></div>
-          </div>
-        </details>
-
-        <details class="log-entry">
-          <summary>
-            <div class="log-summary-left">
-              <span class="log-id">LOG · 10</span>
+              <span class="log-id">PROJ · 01</span>
               <span class="log-title">Automated News Report Generator</span>
-              <span class="log-metric">Self-hosted</span>
+              <span class="log-metric">Self-hosted Web Pipeline</span>
             </div>
             <span class="log-caret">+</span>
           </summary>
           <div class="log-body">
             <div class="meta-row">
-              <div><dt>Type</dt><dd>Web Scraping · Orchestration · Local LLM</dd></div>
-              <div><dt>Stack</dt><dd>Playwright · Prefect · SQLite · Qwen2.5 · Docker · Tailscale Funnel</dd></div>
-              <div><dt>Source</dt><dd>RTVE Google News sitemap</dd></div>
+              <div><dt>Type</dt><dd>Web Scraping · Automation · Local LLM</dd></div>
+              <div><dt>Stack</dt><dd>Playwright · Python · SQLite · Docker · Tailscale</dd></div>
             </div>
-            <p>End-to-end pipeline verified against the real service at every step, not its documentation. The planned deployment target (Hugging Face Spaces) turned out not to be viable, so the project ended up self-hosted via Docker + Tailscale Funnel.</p>
-            <p><strong>Result:</strong> a working daily report with a source citation on every entry.</p>
-            <div class="callout">
-              <span class="callout-label">In practice</span>
-              <p>The dashboard is only reachable while the self-hosted machine is on, not 24/7 — the honest trade-off of a genuinely free deployment.</p>
-            </div>
+            <p>End-to-end automated system that extracts web news, processes and summarizes content using local AI, and serves daily reports with cited sources. Containerized and self-hosted on Linux.</p>
             <div class="links">
-              <a href="https://github.com/AlejandroBeldaFernandez/Automated-News-Report" target="_blank" rel="noopener">View repository ↗</a>
-              <a href="https://alex-server.taile13699.ts.net/" target="_blank" rel="noopener">View demo ↗</a>
+              <a href="https://github.com/AlejandroBeldaFernandez/Automated-News-Report" target="_blank" rel="noopener">View Repository ↗</a>
             </div>
           </div>
         </details>
@@ -525,22 +295,83 @@
         <details class="log-entry">
           <summary>
             <div class="log-summary-left">
-              <span class="log-id">EXTRA</span>
-              <span class="log-title">Cloud: Serverless ML Inference on AWS &amp; Azure</span>
-              <span class="log-metric">Serverless</span>
+              <span class="log-id">PROJ · 02</span>
+              <span class="log-title">MLOps Telco Customer Churn Architecture</span>
+              <span class="log-metric">Production Pipeline</span>
             </div>
             <span class="log-caret">+</span>
           </summary>
           <div class="log-body">
             <div class="meta-row">
-              <div><dt>Type</dt><dd>Cloud Deployment · Serverless Architecture</dd></div>
-              <div><dt>Stack</dt><dd>AWS S3 · Lambda · API Gateway · Azure Blob Storage · Azure Functions</dd></div>
-              <div><dt>Dataset</dt><dd>Iris (AWS) · Diabetes (Azure) — minimal case studies</dd></div>
+              <div><dt>Type</dt><dd>Full MLOps Pipeline · REST API</dd></div>
+              <div><dt>Stack</dt><dd>Python · FastAPI · MLflow · Prefect · Docker · Terraform</dd></div>
             </div>
-            <p>Two small, self-contained projects demonstrating practical skills on both clouds: models served via a public HTTP endpoint, with no server to manage. The focus is the architecture and the real issues solved along the way (IAM permissions, package limits, region restrictions).</p>
+            <p>Complete production application including data validation, automated training pipelines, model monitoring, and a RESTful API wrapped in Docker containers.</p>
             <div class="links">
-              <a href="https://github.com/AlejandroBeldaFernandez/AWS-Iris-Prediction.git" target="_blank" rel="noopener">AWS repo ↗</a>
-              <a href="https://github.com/AlejandroBeldaFernandez/Azure-Diabetes-Prediction.git" target="_blank" rel="noopener">Azure repo ↗</a>
+              <a href="https://github.com/AlejandroBeldaFernandez/MLOPS-Telco-Customer-Churn-Prediction.git" target="_blank" rel="noopener">View Repository ↗</a>
+            </div>
+          </div>
+        </details>
+
+        <details class="log-entry">
+          <summary>
+            <div class="log-summary-left">
+              <span class="log-id">PROJ · 03</span>
+              <span class="log-title">Movie Recommendation Platform</span>
+              <span class="log-metric">Interactive Web Service</span>
+            </div>
+            <span class="log-caret">+</span>
+          </summary>
+          <div class="log-body">
+            <div class="meta-row">
+              <div><dt>Type</dt><dd>Recommendation System · Web Interface</dd></div>
+              <div><dt>Stack</dt><dd>Python · Gradio · scikit-learn · Matrix Factorization</dd></div>
+            </div>
+            <p>Personalized content recommendation engine integrating content-based and collaborative filtering algorithms with an intuitive web frontend.</p>
+            <div class="links">
+              <a href="https://github.com/AlejandroBeldaFernandez/Movies_Recommendations" target="_blank" rel="noopener">View Repository ↗</a>
+            </div>
+          </div>
+        </details>
+
+        <details class="log-entry">
+          <summary>
+            <div class="log-summary-left">
+              <span class="log-id">PROJ · 04</span>
+              <span class="log-title">Coffee Shop Sales Analytics System</span>
+              <span class="log-metric">SQL &amp; BI Engine</span>
+            </div>
+            <span class="log-caret">+</span>
+          </summary>
+          <div class="log-body">
+            <div class="meta-row">
+              <div><dt>Type</dt><dd>Database Design · Business Intelligence</dd></div>
+              <div><dt>Stack</dt><dd>PostgreSQL · SQL · Metabase</dd></div>
+            </div>
+            <p>Database modeling, complex SQL data transformations, and interactive dashboard creation to answer core business operational metrics.</p>
+            <div class="links">
+              <a href="https://github.com/AlejandroBeldaFernandez/Coffee-Shop-Sales.git" target="_blank" rel="noopener">View Repository ↗</a>
+            </div>
+          </div>
+        </details>
+
+        <details class="log-entry">
+          <summary>
+            <div class="log-summary-left">
+              <span class="log-id">PROJ · 05</span>
+              <span class="log-title">Spanish Amazon Reviews Sentiment System</span>
+              <span class="log-metric">NLP &amp; RAG System</span>
+            </div>
+            <span class="log-caret">+</span>
+          </summary>
+          <div class="log-body">
+            <div class="meta-row">
+              <div><dt>Type</dt><dd>NLP Application · Retrieval QA</dd></div>
+              <div><dt>Stack</dt><dd>PyTorch · Hugging Face · ChromaDB · Python</dd></div>
+            </div>
+            <p>Sentiment classification system paired with a Retrieval-Augmented Generation (RAG) assistant that queries customer feedback and automatically answers questions.</p>
+            <div class="links">
+              <a href="https://github.com/AlejandroBeldaFernandez/Amazon-Reviews-Spanish.git" target="_blank" rel="noopener">View Repository ↗</a>
             </div>
           </div>
         </details>
@@ -556,7 +387,7 @@
     <div class="contact-grid">
       <div>
         <span class="eyebrow">// Contact</span>
-        <h2 style="font-size:26px;margin-bottom:20px;">Let's talk</h2>
+        <h2 style="font-size:26px;margin-bottom:20px;">Let's connect</h2>
         <div class="contact-links">
           <a href="mailto:alejandrobeldafernandez@gmail.com">alejandrobeldafernandez@gmail.com</a>
           <a href="https://www.linkedin.com/in/alejandro-belda-fern%C3%A1ndez-0677903b0/" target="_blank" rel="noopener">LinkedIn ↗</a>
@@ -564,7 +395,7 @@
         </div>
       </div>
     </div>
-    <p class="colophon">© 2026 Alejandro Belda Fernández. Built with HTML and CSS, no frameworks.</p>
+    <p class="colophon">© 2026 Alejandro Belda Fernández. Built with HTML &amp; CSS.</p>
   </div>
 </footer>
 
